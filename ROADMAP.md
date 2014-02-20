@@ -6,24 +6,29 @@
 * implement the ability to create reviews and display them on page
 
 
-- [ ] verions 0.0.2
+- [  ] verions 0.0.2
 
 * Implement Users and devise gem. 
 * Add CanCan abilities as well as Voting and Favoriting
 
-- [ ] verions 0.0.3
+- [  ] verions 0.0.3
 
 * Add location model to identify churches in area. 
-* Implement existign church or location database
+* Implement existing church or location database
 
-- [ ] verions 0.0.4
+- [  ] verions 0.0.4
+
+* Implement all models
+* Identify roles
+
+- [  ] verions 0.0.5
+
+* Work out review differences
+
+- [  ] verions 0.0.6
+
+* Work on JQuery and JS
 
 
-- [ ] verions 0.0.5
-
-
-- [ ] verions 0.0.6
-
-
-- [ ] verions 0.0.7
+- [  ] verions 0.0.7
 
