@@ -18,7 +18,7 @@ describe Church do
 	 end
 
 	context "checking invalidation" do
-	  church = Church.new(name: nil)
+	  # church = Church.create(name: 'bill')
 		it "is invalid without name" do
 			expect(Church.create(name: nil)).to have(1).errors_on(:name)
 		end
