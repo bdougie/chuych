@@ -37,8 +37,5 @@ describe Church do
 		end
 	end 
 
-	# context "checking invalidation with duplication" do
 
-
-	# end	
 end
