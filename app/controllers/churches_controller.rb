@@ -22,6 +22,14 @@ class ChurchesController < ApplicationController
   end
 
   def edit
+    @church = Church.find(params[:id])
+    if @post.update_attributes(params[:church])
+      flash[:notice] = "Church was updated."
+      redirect_to @post
+    else
+      flash[:error] = "There was an error saving the church. Please try again."
+      render :edit
+    end
   end
 
 end
