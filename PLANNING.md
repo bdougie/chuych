@@ -16,7 +16,7 @@ Follow
 
 
 Views:
-Tweets(similar)
+Tweets(similar) - index/welcome
     Index
     Show
      Create: choose what church you attend 
@@ -62,6 +62,19 @@ CarrieWave, or something similar
 Minimagic
 Rspec, test all models and pages, possibly controllers 
 
+
+Searching:
+Sun spot gem
+http://railscasts.com/episodes/278-search-with-sunspot
+custom searching using contolrollr
+'''
+ @churches = Church.where('name LIKE %', params[:q])
+ params = {q: 'something'}
+''''
+
+Location 
+http://www.rubygeocoder.com/
+@churches = Church.where('name = %', params[:name]).near(params[:near])
 
 ----- similar sites
 churchrater.com

@@ -1,5 +1,6 @@
 class ChurchController < ApplicationController
   def index
+  	@churches = Church.all
   end
 
   def show
