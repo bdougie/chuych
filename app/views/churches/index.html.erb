@@ -3,4 +3,16 @@
 
 <div>
 		<%= link_to 'Create New Church', new_church_path , class: 'btn btn-primary btn-small' %>
+</div><br/>
+
+<div class="jumbotron">
+
+	<% @churches.each do |church| %>
+
+		<%=church.name %>
+		<%=church.city %>	
+		<%=church.description %>
+	</hr>
+
+	<% end %>
 </div>
