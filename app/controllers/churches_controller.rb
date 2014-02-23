@@ -9,13 +9,13 @@ class ChurchesController < ApplicationController
 
   def create
   	@church = Church.new(params[:id])
-    @church.save   
 
   	if @church.save  	
-  		redirect_to @church, notice: "Church was saved successfully."
+  		flash[:notice] = "Church was saved successfully."
+      redirect_to @church
   	else
   		flash[:error] = "Error creating church. Please try again."
-			redirect_to churches_path
+			render new
 		end
   end	
 
@@ -25,7 +25,7 @@ class ChurchesController < ApplicationController
 
   def edit
     @church = Church.find(params[:id])
-    if @post.update_attributes(params[:church])
+    if @church.update_attributes(params[:church])
       flash[:notice] = "Church was updated."
       redirect_to churches_path
     else

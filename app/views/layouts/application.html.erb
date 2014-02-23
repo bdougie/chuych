@@ -9,10 +9,16 @@
 <body>
 
 	<div class="container">
+    <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Find a church by city">
+        </div>
+        <button type="submit" class="btn btn-default-sm">Find a church</button>
+      </form>
     <ul class="nav nav-tabs">
     	<li><%=link_to "Home[Feedback Stream]", root_path %></li>
-    	<li><%=link_to "Find", churches_path %></li>
-    	<li><%=link_to "Share", '#' %></li>
+      <li><%=link_to "Share", '#' %></li>
+      <li><%=link_to "Churches", churches_path %></li>
 
       <div class="pull-right user-info">
         <% if current_user %>
