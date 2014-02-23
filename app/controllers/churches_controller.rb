@@ -8,16 +8,15 @@ class ChurchesController < ApplicationController
   end
 
   def create
-  	@church = Church.new(params[:id])
-
-
-  	if @church.save  	
-  		flash[:notice] = "Church was saved successfully."
-      redirect_to @church
-  	else
-  		flash[:error] = "Error creating church. Please try again."
-			render new
-		end
+ 	@church = Church.new(church_params)
+	
+	if @church.save  	
+	  flash[:notice] = "Church was saved successfully."
+	  redirect_to @church
+	else
+	  flash[:error] = "Error creating church. Please try again."
+	  render new
+	end
   end	
 
   def show
@@ -37,6 +36,9 @@ class ChurchesController < ApplicationController
 
   private
 
-  @church = Church.create(church_params)
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def page_params
+    params.require(:church).permit(:name, :city, :description)
+  end
 
 end
