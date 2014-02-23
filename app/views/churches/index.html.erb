@@ -6,13 +6,14 @@
 </div><br/>
 
 <div class="jumbotron">
+		<% @churches.each do |church| %>
+			<tr>
+				<td><%=church.name %>, "<%= church.city %>"	</td>
+				<td><%=church.description %></td>
+			</tr>	
+		<% end %>
+</div>
 
-	<% @churches.each do |church| %>
 
-		<%=church.name %>
-		<%=church.city %>	
-		<%=church.description %>
 	</hr>
 
-	<% end %>
-</div>
