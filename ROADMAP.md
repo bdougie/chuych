@@ -1,14 +1,12 @@
 #Roadmap
 
-- [ ] verions 0.0.1
+- [ x ] verions 0.0.1
 
 * Create Models for Churches and Reviews
-* implement the ability to create reviews and display them on page
-
+* Implement Users and devise gem. 
 
 - [  ] verions 0.0.2
-
-* Implement Users and devise gem. 
+* implement the ability to create shares/comments and display them on page
 * Add CanCan abilities as well as Voting and Favoriting
 
 - [  ] verions 0.0.3
