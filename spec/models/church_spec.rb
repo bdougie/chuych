@@ -38,8 +38,7 @@ describe Church do
 	end 
 
 	context 'Checking if a new church is created' do
-		church = Church.new
-		church.save
+		church = Church.create
 		it 'is able to be saved' do
 	    expect{Church.count}.to change{Church.count}.from(0).to(1)
 	  end
