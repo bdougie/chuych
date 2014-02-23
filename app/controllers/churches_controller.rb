@@ -37,6 +37,6 @@ class ChurchesController < ApplicationController
 
   private
 
-  @church = Church.create(church_params)
+  @church = Church.create(churches_params)
 
 end
