@@ -41,7 +41,7 @@ describe Church do
 		church = Church.new
 		church.save
 		it 'is able to be saved' do
-	    expect{Church.increment}.to change{Church.count}.from(0).to(1)
+	    expect{Church.count}.to change{Church.count}.from(0).to(1)
 	  end
 	end
 end
