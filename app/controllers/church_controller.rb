@@ -1,7 +1,6 @@
 class ChurchController < ApplicationController
   def index
   	@churches = Church.all
-
   end
 
   def new
@@ -14,7 +13,7 @@ class ChurchController < ApplicationController
   		redirect_to @church, notice: "Church was saved successfully."
   	else
   		flash[:error] = "Error creating church. Please try again."
-			render :new
+			render :index
 		end
   end	
 
@@ -25,6 +24,4 @@ class ChurchController < ApplicationController
   def edit
   end
 
-  def new
-  end
 end
