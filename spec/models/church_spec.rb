@@ -27,7 +27,7 @@ describe Church do
 			expect(Church.create(city: nil)).to have(1).errors_on(:city)
 		end
 
-		it "is invalid without a city" do
+		it "is invalid without a description" do
 			expect(Church.create(description: nil)).to have(1).errors_on(:description)
 		end
 
