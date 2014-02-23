@@ -6,8 +6,7 @@ roadmap.md
 Models:
 Users
 Churches
-Reviews
-Tweets
+Post(Reviews & Tweets)
 Churches
     Name
     Location => auto populate based on    zip code
@@ -16,12 +15,11 @@ Follow
 
 
 Views:
-Tweets(similar) - index/welcome
+Post(similar) - index/welcome
     Index
     Show
      Create: choose what church you attend 
-Reviews
-    Index show
+
 Users
 Churches
     Name
