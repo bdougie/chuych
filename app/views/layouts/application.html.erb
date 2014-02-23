@@ -14,6 +14,13 @@
     	<li><%=link_to "Find", churches_path %></li>
     	<li><%=link_to "Share", '#' %></li>
 
+      <div class="pull-right user-info">
+        <% if current_user %>
+          Hello <%= current_user.name %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        <% else %>  
+          <%= link_to "Sign In", new_user_session_path %> or
+          <%= link_to "Sign Up", new_user_registration_path %>
+        <% end %>
 
     </ul>
 
