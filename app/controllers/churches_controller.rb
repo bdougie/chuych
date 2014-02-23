@@ -10,6 +10,7 @@ class ChurchesController < ApplicationController
   def create
   	@church = Church.new(params[:id])
 
+
   	if @church.save  	
   		flash[:notice] = "Church was saved successfully."
       redirect_to @church
@@ -33,5 +34,9 @@ class ChurchesController < ApplicationController
       render :edit
     end
   end
+
+  private
+
+  @church = Church.create(church_params)
 
 end
