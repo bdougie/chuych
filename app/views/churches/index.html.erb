@@ -5,16 +5,18 @@
 		<%= link_to 'Create New Church', new_church_path , class: 'btn btn-primary btn-small' %>
 </div><br/>
 
-<div class="jumbotron">
-	
+<div class="box panel panel-default">
+
 		<% @churches.each do |church| %>
 			<tr>
 				<td><%=church.name %>, "<%= church.city %>"	</td>
 				<td><%=church.description %></td>
+</div>
+
 		<% end %>
+	
 			</tr>	
 			
-</div>
 
 
 	</hr>
