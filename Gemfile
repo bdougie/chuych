@@ -10,6 +10,7 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'cancan'
+gem 'fog'
 
 #assets
 gem 'sass-rails', '~> 4.0.0'
