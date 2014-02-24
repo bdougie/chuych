@@ -1,11 +1,12 @@
-# require 'spec_helper'
+require 'spec_helper'
 
-# describe User do
-# 	context do
+describe User do
+	# skip_confirmation :password
+	user = User.create(name: 'brian', password: '12345678', email: 'ilikerobot@gmail.com')
+	context do
 
-# 	  it "is valid with email" do
-# 			expect(User.create(email: nil)).to have(1)errors_on(:email)
-# 		end
-
-# 	end
-# end
+	  it "is has a name" do
+			expect(User.name).to eq('brian')
+		end
+	end
+end
