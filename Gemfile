@@ -7,6 +7,9 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'devise'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'cancan'
 
 #assets
 gem 'sass-rails', '~> 4.0.0'
