@@ -1,4 +1,4 @@
-class UsersController < Devise::RegistrationsControler
+class UsersController < ApplicationController
 	before_filter :configure_permitted_parameters, if: :devise_controller?
 
 	def show
@@ -16,9 +16,9 @@ class UsersController < Devise::RegistrationsControler
 	# 	devise_parameter_sanitizer.for(:sign_up) << :name
 	# end
 
-	def configure_permitted_parameters
-		devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :avatar) }
-	end
+	# def configure_permitted_parameters
+	# 	devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :avatar) }
+	# end
 
 
 end
