@@ -2,11 +2,14 @@
 
 # describe User do
 # 	# skip_confirmation :password
-# 	user = User.create(name: 'brian', password: '12345678', email: 'ilikerobot@gmail.com')
-# 	context do
+# 	context "user validations" do
+#  #  it "is has a name" do
+# 	# 	expect{FacoryGirl.build(:user)}.to eq('brian')
+# 	# end
 
-# 	  it "is has a name" do
-# 			expect(User.name).to eq('brian')
+# 		it 'can create a new user' do
+# 	    expect{FactoryGirl.create(:user)}.to change{User.count}.from(0).to(1)
+
 # 		end
 # 	end
 # end
