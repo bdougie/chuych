@@ -1,0 +1,11 @@
+<%= render 'posts/post' %>
+
+<div class="box panel panel-default">
+	<table>
+		<% @posts.each do |post| %>
+			<tr>
+				<td><%=post.body %></td>
+			</tr>	
+		<% end %>
+	</table>
+</div>

@@ -1,0 +1,10 @@
+<%= form_for @post do |f| %>
+	<div class="form-group">
+    <%= f.label :body, 'Post' %>
+    <%= f.text_field :body, class: "form-control" %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

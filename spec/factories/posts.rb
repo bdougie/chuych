@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :post do
-    body "MyText"
+    body "Some text"
   end
 end
