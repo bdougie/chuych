@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+	before_filter :configure_permitted_parameters, if: :devise_controller?
 
 	def show
 		@user = User.find(params[:id])
@@ -11,9 +12,9 @@ class UsersController < ApplicationController
 
 	private
 	#parameters for users
-	#def users_params
-		#params.require(:user).permit(:avatar)
-	#end
+	def configure_permitted_parameters
+		devise_parameter_sanitizer.for(:sign_up) << :name, :email, :avatar
+	end
 
 end
 

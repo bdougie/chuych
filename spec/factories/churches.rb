@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :church do
     name "MyString"
-    description "MyText"
+    description "MyText is now longer"
     city "MyString"
   end
 end

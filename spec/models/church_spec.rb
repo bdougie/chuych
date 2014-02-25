@@ -20,7 +20,7 @@ describe Church do
 	context "checking invalidation" do
 	   # church = Church.create(name: 'bill'
 		it "is invalid without name" do
-			expect(Church.create(name: nil)).to have(1).errors_on(:name)
+			expect(FactoryGirl.build(:church, name: nil)).to have(1).errors_on(:name)
 		end
 
 		it "is invalid without a city" do
@@ -36,12 +36,13 @@ describe Church do
 			expect(Church.new(description: 'this is a description')).to_not be_valid
 		end
 	end 
-=begin
+
 	context 'Checking if a new church is created' do
-		church = Church.create
 		it 'is able to be saved' do
-	    expect{Church.count}.to change{Church.count}.from(0).to(1)
+			# church = Church.create
+
+	    expect{FactoryGirl.create(:church)}.to change{Church.count}.from(0).to(1)
 	  end
 	end
-=end	
+	
 end

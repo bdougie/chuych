@@ -36,7 +36,7 @@ class ChurchesController < ApplicationController
 
   private
 
-  # Never trust parameters from the scary internet, only allow the white list through.
+  # Strong Parameters
    def church_params
      params.require(:church).permit(:name, :city, :description)
    end
