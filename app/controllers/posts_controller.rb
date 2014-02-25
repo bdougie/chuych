@@ -16,7 +16,8 @@ class PostsController < ApplicationController
 
 	private
 
-	# def configure_permitted_parameters
-	#end
+	def configure_permitted_parameters
+     params.require(:post).permit(:body)
+	end
 
 end
