@@ -5,7 +5,7 @@ class PostsController < ApplicationController
 	end
 
 	def new
-		@posts = Post.new
+		@post = Post.new
 	end
 
 	def show
@@ -17,7 +17,7 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		@post = Post.new(params[:post])
+		@post = Post.new(post_params)
 		if @post.save
 			flash[:notice] = "Post was saved."
 			redirect_to @post
@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
 	private
 
-	def configure_permitted_parameters
+	def post_params
      params.require(:post).permit(:body)
 	end
 

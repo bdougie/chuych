@@ -11,6 +11,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'cancan'
 gem 'fog'
+gem 'figaro'
 
 #assets
 gem 'sass-rails', '~> 4.0.0'

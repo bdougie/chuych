@@ -64,6 +64,9 @@ GEM
     factory_girl_rails (4.4.0)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     fog (1.19.0)
       builder
       excon (~> 0.31.0)
@@ -181,6 +184,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
   factory_girl_rails (~> 4.0)
+  figaro
   fog
   jbuilder (~> 1.2)
   jquery-rails

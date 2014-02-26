@@ -1,11 +1,9 @@
 Chuych::Application.routes.draw do
   
   resources :churches,  only: [:index, :create, :new, :show]
-  resources :posts, only: [:index, :edit, :show, :new]
+  resources :posts, only: [:index, :edit, :show, :new, :create]
 
-  resources :welcome, only: [:index] do
-  	resources :posts, only: [:index]
-  end
+  resources :welcome, only: [:index] 
 
 
   root :to => 'welcome#index'
