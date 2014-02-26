@@ -1,17 +1,19 @@
 class PostsController < ApplicationController
-	def new
+	
+	def index
+		@posts = Post.all
 	end
 
-	def create
+	def new
+		@posts = Post.new
 	end
 
 	def show
+		@post =  Post.find(params[:id])
 	end
 
-	def update
-	end
+	def edit
 
-	def destroy
 	end
 
 	private
