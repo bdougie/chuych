@@ -18,9 +18,10 @@ class PostsController < ApplicationController
 
 	def create
 		@post = Post.new(post_params)
+		@post.user = current_user
 		if @post.save
 			flash[:notice] = "Post was saved."
-			redirect_to @post
+			redirect_to welcome_index_path
 		else
 			flash[:error] = "There was an error saving the post. Please try again."
 			render :new
