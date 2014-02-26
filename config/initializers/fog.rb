@@ -1,5 +1,6 @@
 # Adding Amazon S3 to Carrierwave
 CarrierWave.configure do |config| 
+	
   config.fog_credentials = { 
     :provider               => 'AWS', 
     :aws_access_key_id      => ENV['AWS_ACCESS_KEY_ID'], 

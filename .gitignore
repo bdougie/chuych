@@ -18,5 +18,8 @@
 # Ignore application configuration
 /config/application.yml
 
+#ignore public file
+/public
+
 /public/system/*
 
