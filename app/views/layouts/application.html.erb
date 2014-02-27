@@ -9,6 +9,8 @@
 <body>
 
 	<div class="container">
+    <% if current_user %> 
+    
     <form class="navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Find by city or church">
@@ -32,7 +34,7 @@
           <li><%= link_to "Sign In", new_user_session_path %> or</li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
-
+    <% end %>
     </ul>
 
      <% if flash[:notice] %>
