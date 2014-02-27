@@ -6,6 +6,7 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
+		@posts = Post.all
 	end
 
 	def show
@@ -19,6 +20,8 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(post_params)
 		@post.user = current_user
+		@post.save
+
 		if @post.save
 			flash[:notice] = "Post was saved."
 			redirect_to welcome_index_path
