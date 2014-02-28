@@ -7,7 +7,7 @@
 
 <div class="box panel panel-default">
 	<table>
-		<% @churches.each do |church| %>
+		<% Church.all.each do |church| %>
 			<tr>
 				<td><%=church.name %>, "<%= church.city %>"	</td>
 				<td><%=church.description %></td>
