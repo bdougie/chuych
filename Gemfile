@@ -12,6 +12,7 @@ gem 'mini_magick'
 gem 'cancan'
 gem 'fog'
 gem 'figaro'
+gem 'faker'
 
 #assets
 gem 'sass-rails', '~> 4.0.0'
