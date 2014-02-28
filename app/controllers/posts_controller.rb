@@ -7,7 +7,6 @@ class PostsController < ApplicationController
 	def new
 		@post = Post.new
 		@posts = Post.all
-		authorize! :create, Post, message: "You need own the post to create a post."
 	end
 
 	def show

@@ -1,7 +1,7 @@
 Chuych::Application.routes.draw do
   
   resources :churches,  only: [:index, :create, :new, :show]
-  resources :posts, only: [:index, :edit, :show, :new, :create]
+  resources :posts, only: [:index, :edit, :show, :new, :create, :edit]
 
   resources :welcome, only: [:index, :new] 
 

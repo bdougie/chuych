@@ -1,6 +1,6 @@
 #Post show
 
-<h1><%= @post.title %></h1>
+<h1><%= @post.user.name %></h1>
 
 <% if can? :edit, @post %>
   <%= link_to "Edit", edit_post_path(@post), class: 'btn btn-mini' %>

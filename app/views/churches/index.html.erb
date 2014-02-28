@@ -5,9 +5,16 @@
 		<%= link_to 'Create New Church', new_church_path , class: 'btn btn-primary btn-small' %>
 </div><br/>
 
+
 <div class="box panel panel-default">
+	<%= render partial: 'churches/churches', locals: {churches: @churches} %>
+</div>
+
+
+
+<!-- <div class="box panel panel-default">
 	<table>
-		<% Church.all.each do |church| %>
+		# <%Church.all.each do |church| %>
 			<tr>
 				<td><%=church.name %>, "<%= church.city %>"	</td>
 				<td><%=church.description %></td>
@@ -16,5 +23,4 @@
 	</table>
 	</hr>
 </div>
-
-
+ -->
