@@ -1,9 +1,9 @@
 <div class="list-group">
 	<% churches.each do |church| %>
 	  <a href="#" class="list-group-item">
-	    <h4 class="list-group-item-heading"><%= post.user.name %></h4>
+	    <h4 class="list-group-item-heading"><%= church.name %></h4>
 	    <p class="list-group-item-text">
-	    	<%= church.name %><br/>
+	    	<%= church.city %><br/>
 			 	<%= church.description %>
 	    </p>
 	  </a>
