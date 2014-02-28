@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'faker'
+
+rand(10..30).times do
+	p = Post.create(body: Faker::Lorem.words(3..12)).join(" ")
+end
+
+puts"Seeds Finished"
+puts "#{Post.count} posts created"
