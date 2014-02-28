@@ -8,9 +8,66 @@
 
 require 'faker'
 
-rand(10..30).times do
-	p = Post.create(body: Faker::Lorem.words(3..12)).join(" ")
+#create 25 Churches 
+25.times do
+	c = Church.create(
+		name: Faker::Name.name,
+		city: Faker::City.city,
+		description: Faker::Lorem.words(3..12)).join(" "))
 end
+
+
+#create 15 users
+rand(9..15).times do
+	password = Faker::Lorem.characters(10)
+	u = User.new(
+	  name: Faker::Name.name, 
+	  email: Faker::Internet.email, 
+	  password: password, 
+	  password_confirmation: password)
+	u.skip_confirmation!
+	u.save
+
+		#create about 30 post
+		 # 15.times do
+		 #    p = u.Post.create(body: Faker::Lorem.words(3..12)).join(" ")
+		 #    p.update_attribute(:created_at, Time.now - rand(600..31536000))
+
+		 # end
+
+
+ end
+
+u = User.new(
+  name: 'Admin User',
+  email: 'admin@example.com', 
+  password: 'helloworld', 
+  password_confirmation: 'helloworld')
+u.skip_confirmation!
+u.save
+u.update_attribute(:role, 'admin')
+
+u = User.new(
+  name: 'Moderator User',
+  email: 'moderator@example.com', 
+  password: 'helloworld', 
+  password_confirmation: 'helloworld')
+u.skip_confirmation!
+u.save
+u.update_attribute(:role, 'moderator')
+
+u = User.new(
+  name: 'Member User',
+  email: 'member@example.com', 
+  password: 'helloworld', 
+  password_confirmation: 'helloworld')
+u.skip_confirmation!
+u.save
+
+
+
 
 puts"Seeds Finished"
 puts "#{Post.count} posts created"
+puts "#{User.count} users created"
+puts "#{Church.count} church created"
