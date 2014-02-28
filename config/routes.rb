@@ -6,7 +6,7 @@ Chuych::Application.routes.draw do
   resources :welcome, only: [:index, :new] 
 
 
-  root :to => 'welcome#new'
+  root :to => 'welcome#index'
 
   get "church/show"
   get "church/edit"
