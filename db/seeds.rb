@@ -21,7 +21,8 @@ end
 rand(9..15).times do
 	password = Faker::Lorem.characters(10)
 	u = User.new(
-	  name: Faker::Name.name, 
+	  name: Faker::Name.name,
+    username: Faker::Name.name, 
 	  email: Faker::Internet.email, 
 	  password: password, 
 	  password_confirmation: password)
@@ -40,6 +41,7 @@ rand(9..15).times do
 
 u = User.new(
   name: 'Admin User',
+  username: 'admin',
   email: 'admin@example.com', 
   password: 'helloworld', 
   password_confirmation: 'helloworld')
@@ -49,6 +51,7 @@ u.update_attribute(:role, 'admin')
 
 u = User.new(
   name: 'Moderator User',
+  username: 'moderator',
   email: 'moderator@example.com', 
   password: 'helloworld', 
   password_confirmation: 'helloworld')
@@ -58,12 +61,21 @@ u.update_attribute(:role, 'moderator')
 
 u = User.new(
   name: 'Member User',
+  username: 'member',
   email: 'member@example.com', 
   password: 'helloworld', 
   password_confirmation: 'helloworld')
 u.skip_confirmation!
 u.save
 
+# u = User.new(
+#   name: 'Brian Douglas',
+#   username: 'brianllamar',
+#   email: 'ilikerobot@gmail.com', 
+#   password: 'helloworld', 
+#   password_confirmation: 'helloworld')
+# u.skip_confirmation!
+# u.save
 
 
 

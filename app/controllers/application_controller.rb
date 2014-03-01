@@ -7,13 +7,17 @@ class ApplicationController < ActionController::Base
   	redirect_to root_url, :alert => exception.message
   end
 
+  def after_sign_in_path_for(resource)
+    welcome_index_path
+  end  
+
 	before_filter :configure_permitted_parameters, if: :devise_controller?
 
   private
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << [:avatar, :name]
-    devise_parameter_sanitizer.for(:account_update) << [:avatar, :name]
+    devise_parameter_sanitizer.for(:account_update) << [:avatar, :name, :username]
   end
 
 end
