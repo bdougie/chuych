@@ -9,8 +9,8 @@ class Ability
     end
 
     #Moderators can manage churches
-    If user.role ? :moderator
-        can :manage, Comment
+    if user.role? :moderator
+        can :manage, Church
     end
 
     #Admins can do anything
