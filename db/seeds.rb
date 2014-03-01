@@ -13,6 +13,8 @@ require 'faker'
 	c = Church.create(
 		name: Faker::Name.name,
 		city: Faker::Address.city,
+    latitude: Faker::Address.latitude,
+    longitude: Faker::Address.longitude,
 		description: Faker::Lorem.words(3..12).join(" "))
 end
 
