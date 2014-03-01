@@ -22,7 +22,7 @@ rand(9..15).times do
 	password = Faker::Lorem.characters(10)
 	u = User.new(
 	  name: Faker::Name.name,
-    username: Faker::Name.name, 
+    username: Faker::Lorem.word, 
 	  email: Faker::Internet.email, 
 	  password: password, 
 	  password_confirmation: password)
@@ -68,14 +68,14 @@ u = User.new(
 u.skip_confirmation!
 u.save
 
-# u = User.new(
-#   name: 'Brian Douglas',
-#   username: 'brianllamar',
-#   email: 'ilikerobot@gmail.com', 
-#   password: 'helloworld', 
-#   password_confirmation: 'helloworld')
-# u.skip_confirmation!
-# u.save
+u = User.new(
+  name: 'Brian Douglas',
+  username: 'brianllamar',
+  email: 'ilikerobot@gmail.com', 
+  password: 'helloworld', 
+  password_confirmation: 'helloworld')
+u.skip_confirmation!
+u.save
 
 
 
