@@ -12,8 +12,8 @@ require 'faker'
 25.times do
 	c = Church.create(
 		name: Faker::Name.name,
-		city: Faker::City.city,
-		description: Faker::Lorem.words(3..12)).join(" "))
+		city: Faker::Address.city,
+		description: Faker::Lorem.words(3..12).join(" "))
 end
 
 
@@ -28,12 +28,12 @@ rand(9..15).times do
 	u.skip_confirmation!
 	u.save
 
-		#create about 30 post
-		 # 15.times do
-		 #    p = u.Post.create(body: Faker::Lorem.words(3..12)).join(" ")
-		 #    p.update_attribute(:created_at, Time.now - rand(600..31536000))
+		# create about 30 post
+		 15.times do
+		    p = u.posts.create(body: Faker::Lorem.words(3..12).join(" "))
+		    p.update_attribute(:created_at, Time.now - rand(600..31536000))
 
-		 # end
+		 end
 
 
  end
