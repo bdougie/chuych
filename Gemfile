@@ -15,6 +15,7 @@ gem 'figaro'
 gem 'faker'
 gem "geocoder"
 gem 'acts-as-taggable-on'
+gem 'sunspot_rails'
 
 #assets
 gem 'sass-rails', '~> 4.0.0'
