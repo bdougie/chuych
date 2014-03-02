@@ -13,10 +13,13 @@ gem 'cancan'
 gem 'fog'
 gem 'figaro'
 gem 'faker'
+#search 
 gem "geocoder"
 gem 'acts-as-taggable-on'
 gem 'sunspot_rails'
 gem 'progress_bar' # added for sunspot
+#login gems
+gem 'omniauth-facebook'
 
 #assets
 gem 'sass-rails', '~> 4.0.0'
