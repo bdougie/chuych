@@ -1,6 +1,11 @@
 class ChurchesController < ApplicationController
+
   def index
-  	@churches = Church.all
+    if params[:search].present?
+      @churches = Church.near(params[:search], 50, :order => :distance)
+    else
+      @churches = Church.all
+    end
   end
 
   def new

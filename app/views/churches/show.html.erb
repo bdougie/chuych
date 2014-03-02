@@ -3,3 +3,9 @@
 
 <p>"<%= @church.description %>"</p>
 
+<h3>Nearby Churhes</h3>
+<ul>
+<% for location in @location.nearbys(20) %>
+  <li><%= link_to church.city, church %> (<%= church.distance.round(2) %> miles)</li>
+<% end %>
+</ul>
