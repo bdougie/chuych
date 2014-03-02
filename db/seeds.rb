@@ -70,16 +70,6 @@ u = User.new(
 u.skip_confirmation!
 u.save
 
-u = User.new(
-  name: 'Brian Douglas',
-  username: 'brianllamar',
-  email: 'ilikerobot@gmail.com', 
-  password: 'helloworld', 
-  password_confirmation: 'helloworld')
-u.skip_confirmation!
-u.save
-
-
 
 puts"Seeds Finished"
 puts "#{Post.count} posts created"
