@@ -12,12 +12,12 @@ class User < ActiveRecord::Base
     user = User.where(:provider => auth.provider, :uid => auth.uid).first
     unless user
       pass = Devise.friendly_token[0,20]
-      user = user.new(name: auth.extra.raw_info.name,
+      user = User.new(name: auth.extra.raw_info.name,
                         provider: auth.provider,
                         uid: auth.uid,
                         email: auth.info.email,
                         password: pass,
-                        password_confirmaiton: pass
+                        password_confirmation: pass
                         )
       user.skip_confirmation!
       user.save
