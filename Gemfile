@@ -16,6 +16,7 @@ gem 'faker'
 gem "geocoder"
 gem 'acts-as-taggable-on'
 gem 'sunspot_rails'
+gem 'progress_bar' # added for sunspot
 
 #assets
 gem 'sass-rails', '~> 4.0.0'
@@ -35,6 +36,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'capybara'
+  #added for sunspot/solr 
+  gem 'sunspot_solr'
 end
 
 group :development do

@@ -1,11 +1,12 @@
 class ChurchesController < ApplicationController
 
   def index
-    if params[:search].present?
-      @churches = Church.near(params[:search], 50, :order => :distance)
-    else
-      @churches = Church.all
-    end
+  
+    # @search = Church.search do
+    #   fulltext params[:search]
+    # end
+    @churches = Church.all
+  
   end
 
   def new

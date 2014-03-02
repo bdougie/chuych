@@ -4,10 +4,6 @@
 	<%= render 'search_form' %>
 
 
-<div>
-		<%= link_to 'Create New Church', new_church_path , class: 'btn btn-primary btn-small' %>
-</div><br/>
-
 
 <div class="box panel panel-default">
 	<%= render partial: 'churches/churches', locals: {churches: @churches} %>

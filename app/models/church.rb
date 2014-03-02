@@ -3,7 +3,13 @@ class Church < ActiveRecord::Base
 	acts_as_taggable
 
 	geocoded_by :city
-	# after_validation :geocode, if => :city_changed?
+	after_validation :geocode
+	# I commented out due to error, if => :city_changed?
+
+	#searchable method is undefined
+	# searchable do
+	# 	text :city, :latitude, :longitude
+	# end
 
 	validates :name, :city, presence: true
 	validates :description, length: { minimum: 10 }
