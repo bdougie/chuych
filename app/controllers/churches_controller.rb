@@ -1,8 +1,8 @@
 class ChurchesController < ApplicationController
 
   def index
-  
-    # @search = Church.search do
+    #search method is undefined. 
+    # @search = Church.search do 
     #   fulltext params[:search]
     # end
     @churches = Church.all
@@ -47,7 +47,7 @@ class ChurchesController < ApplicationController
 
   # Strong Parameters
    def church_params
-     params.require(:church).permit(:name, :city, :description)
+     params.require(:church).permit(:name, :city, :description, :tag_list)
    end
 
 end

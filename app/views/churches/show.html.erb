@@ -1,11 +1,11 @@
-<h1><%= @church.name %></h1>
-<p>Located in: <%= @church.city %></p>
+<div class="panel panel-primary">
+  <div class="panel-heading">
 
-<p>"<%= @church.description %>"</p>
+		<h1><%= @church.name %></h1>
+	</div></br>
+	<p>Located in: <%= @church.city %></p>
 
-<h3>Nearby Churhes</h3>
-<ul>
-<% for location in @location.nearbys(20) %>
-  <li><%= link_to church.city, church %> (<%= church.distance.round(2) %> miles)</li>
-<% end %>
-</ul>
+	<p>"<%= @church.description %>"</p>
+
+	<p>@church.tag_list</p>
+</div>
