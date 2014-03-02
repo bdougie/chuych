@@ -3,12 +3,19 @@
     <%= f.label :name, 'Church Name' %>
     <%= f.text_field :name, class: "form-control" %>
   </div>
+
   <div class="form-group">
-    <%= f.label :city, 'Location' %>
+    <%= f.label :city, 'City,St' %>
     <%= f.text_field :city, placeholder: 'Tampa, KS', class: "form-control" %>
   </div>
+
   <div class="form-group">
-    <%= f.label :tag_list, 'In 3 or more words describe the church' %>
+    <%= f.label :tag_list, 'Denonimination (Feel free to make up your own)' %>
+    <%= f.text_field :tag_list, placeholder: 'Catholic, Lutheran, Non-denonimational', class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :tag_list, 'Describe the church in 3 or more words' %>
     <%= f.text_field :tag_list, placeholder: 'Food, Fun, Fellowship', class: "form-control" %>
   </div>
   <div class="form-group">
