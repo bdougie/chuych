@@ -10,6 +10,7 @@ class UsersController < ApplicationController
 
 
 	private
+	# strong params are in the ApplicationController
 	# #parameters for users
 	# def configure_permitted_parameters
 	# 	devise_parameter_sanitizer.for(:sign_up) << :name

@@ -3,9 +3,13 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable,
-         :omniauthable, :omniauth_providers => [:facebook]
+         :omniauthable, #:omniauth_providers => [:facebook], :omniauth_providers => [:twitter],
 
+  # vthese validations are throwing errors.
   # validates :email, presence: true
+  validates :username, presence: true
+  validates :username, uniqueness: true
+
   mount_uploader :avatar, AvatarUploader
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)
@@ -16,6 +20,7 @@ class User < ActiveRecord::Base
                         provider: auth.provider,
                         uid: auth.uid,
                         email: auth.info.email,
+                        # avatar: auth.image,
                         password: pass,
                         password_confirmation: pass
                         )
