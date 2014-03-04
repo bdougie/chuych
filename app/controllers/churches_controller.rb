@@ -5,7 +5,11 @@ class ChurchesController < ApplicationController
     # @search = Church.search do 
     #   fulltext params[:search]
     # end
-    @churches = Church.all
+    if params[:near]
+      @churches = Church.near(params[:near])
+    else
+      @churches = Church.all
+    end
   
   end
 
@@ -14,14 +18,13 @@ class ChurchesController < ApplicationController
   end
 
   def create
-  	 @church = Church.new(church_params)
-     @church.save
+	 @church = Church.new(church_params)
    if @church.save   
      flash[:notice] = "Church was saved successfully."
      redirect_to @church
    else
      flash[:error] = "Error creating church. Please try again."
-     render new
+     render :new
    end
   end	
 
