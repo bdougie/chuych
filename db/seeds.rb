@@ -20,16 +20,19 @@ end
 
 
 #create 15 users
-rand(9..15).times do
+
+# crude workaround to randomly-generated username collisions
+usernames = Faker::Lorem.words(rand(9..15)).uniq
+usernames.each do |username|
 	password = Faker::Lorem.characters(10)
 	u = User.new(
 	  name: Faker::Name.name,
-    username: Faker::Lorem.word, 
+    username: username, 
 	  email: Faker::Internet.email, 
 	  password: password, 
 	  password_confirmation: password)
 	u.skip_confirmation!
-	u.save
+	u.save!
 
 		# create about 30 post
 		 15.times do
