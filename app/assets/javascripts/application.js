@@ -14,7 +14,10 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
+//= require jquery.geocomplete.min
 //= require_tree .
 
 
-$("church").geocomplete({ details: "form-group" })
+$(function(){
+	$("#location").geocomplete()
+})

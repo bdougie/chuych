@@ -2,9 +2,9 @@
   <div class="span4">
 		<div class="form-group">
 			<%= form_tag churches_path, :method => :get do %>
-	  		<div id="church">
-		    <%= text_field_tag :near, params[:near], class: "form-control", placeholder: 'Try to search by City and State' %>
-			  </div>
+	  		
+		    <%= text_field_tag :near, params[:near], id: "location", class: "form-control", placeholder: 'Try to search by City and State' %>
+			  
 		    <%= submit_tag "Search", :name => nil, class: "btn btn-primary"  %>
 			<% end %>
 		    
