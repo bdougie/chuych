@@ -20,6 +20,10 @@ class AvatarUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  # def default_url
+  #   "/images/fallback/" + [version_name, "default.jpeg"].compact.join('_')
+  # end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -43,6 +47,8 @@ class AvatarUploader < CarrierWave::Uploader::Base
   version :small do
     process :resize_to_fill => [100, 100]
   end
+
+
 
 
   # Add a white list of extensions which are allowed to be uploaded.

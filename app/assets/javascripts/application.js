@@ -17,4 +17,4 @@
 //= require_tree .
 
 
-$("input").geocomplete({ details: "form" })
+$("church").geocomplete({ details: "form-group" })

@@ -65,4 +65,8 @@ class User < ActiveRecord::Base
     self.role = 'member'
   end
 
+  # def set_avatar
+  #   self.avatar = image_tag()
+  # end
+
 end
