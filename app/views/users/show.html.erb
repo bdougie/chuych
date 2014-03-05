@@ -1,0 +1,33 @@
+<h1><%= @user.name %></h1>
+
+<div class="row">
+  <div class="span12">
+    <div class="media">
+      <% if @user.avatar? %>
+        <%= image_tag @user.avatar.url, class: 'pull-left' %>
+      <% end %>
+      <div class="media-body">
+        <h2 class="media-heading"><%= @user.name %></h2><br/>
+        <small>
+          <%= pluralize(@user.posts.count, 'post') %>,
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<div class="row">
+  <div class="tabbable tabs-left">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#posts" data-toggle="tab">Posts</a></li>
+    </ul>
+    <div class="tab-content">
+      <div class="tab-pane active" id="posts">
+        <%= render 'posts/posts' %>
+      </div>
+     
+    </div>
+  </div>
+</div>

@@ -16,4 +16,5 @@ Chuych::Application.routes.draw do
   # added the below for twitter
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}, controllers: {omniauth_callbacks: "users/omniauth_callbacks"}
 
+  resources :users, only: [:show]
 end
