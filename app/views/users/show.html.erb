@@ -1,4 +1,3 @@
-<h1><%= @user.name %></h1>
 
 <div class="row">
   <div class="span12">
@@ -7,9 +6,9 @@
         <%= image_tag @user.avatar.url, class: 'pull-left' %>
       <% end %>
       <div class="media-body">
-        <h2 class="media-heading"><%= @user.name %></h2><br/>
+        <h2 class="media-heading"><%= @user.name %></h2>
         <small>
-          <%= pluralize(@user.posts.count, 'post') %>,
+          <%= pluralize(@user.posts.count, 'post') %>, add a bio and associated church follows
         </small>
       </div>
     </div>

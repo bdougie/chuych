@@ -3,6 +3,8 @@ class Church < ActiveRecord::Base
 	acts_as_taggable
 	acts_as_taggable_on :denominations, :tags
 
+	has_many :favorites, dependent: :destroy
+
 	geocoded_by :city
 	after_validation :geocode
 	# I commented out due to error, if => :city_changed?

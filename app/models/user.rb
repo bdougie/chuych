@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :favorites, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -54,6 +55,10 @@ class User < ActiveRecord::Base
 
   has_many :posts
 
+  def favorited(church)
+    self.favorites.where(church_id: church.id).first
+  end
+
   ROLES = %w[member moderator admin]
 		def role?(base_role)
 		  role.nil? ? false : ROLES.index(base_role.to_s) <= ROLES.index(role)
@@ -64,6 +69,7 @@ class User < ActiveRecord::Base
 	def set_member
     self.role = 'member'
   end
+
 
   # def set_avatar
   #   self.avatar = image_tag()
