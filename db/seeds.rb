@@ -11,7 +11,7 @@ require 'faker'
 #create 25 Churches 
 25.times do
 	c = Church.create(
-		name: Faker::Name.name,
+		name: Faker::Lorem.words(2..3).join(" "),
 		city: Faker::Address.city,
     latitude: Faker::Address.latitude,
     longitude: Faker::Address.longitude,

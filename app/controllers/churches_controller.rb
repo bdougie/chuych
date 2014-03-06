@@ -10,7 +10,8 @@ class ChurchesController < ApplicationController
     else
       @churches = Church.all
     end
-  
+     # @churches = Church.paginate(page: params[:page], per_page: 10)
+    
   end
 
   def new

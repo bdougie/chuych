@@ -21,3 +21,8 @@
 $(function(){
 	$("#location").geocomplete()
 })
+
+
+$jQuery(function () {
+    jQuery('#myTab a:last').tab('show')
+  })

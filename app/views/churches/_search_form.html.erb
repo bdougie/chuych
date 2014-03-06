@@ -3,7 +3,7 @@
 		<div class="form-group">
 			<%= form_tag churches_path, :method => :get do %>
 	  		
-		    <%= text_field_tag :near, params[:near], id: "location", class: "form-control", placeholder: 'Try to search by City and State' %>
+		    <%= text_field_tag :near, params[:near], id: "location", class: "form-control", placeholder: 'Search by City or Address' %>
 			  
 		    <%= submit_tag "Search", :name => nil, class: "btn btn-primary"  %>
 			<% end %>
