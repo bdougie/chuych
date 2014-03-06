@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 	def index 
 	end
 
+	
 
 	private
 	# strong params are in the ApplicationController

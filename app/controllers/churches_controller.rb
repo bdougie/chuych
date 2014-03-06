@@ -51,7 +51,7 @@ class ChurchesController < ApplicationController
 
   # Strong Parameters
    def church_params
-     params.require(:church).permit(:name, :city, :description, :tag_list)
+     params.require(:church).permit(:name, :city, :description, :tag_list, :denomination_list)
    end
 
 end
