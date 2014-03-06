@@ -47,6 +47,19 @@ class ChurchesController < ApplicationController
     end
   end
 
+  def destroy
+    @church = Church.find(params[:id])
+    name = @church.name
+    if @church.destroy
+      flash[:notice] = "\"#{name}\" was deleted successfully."
+      redirect_to churches_path
+    else
+      flash[:error] = "There was an error deleting the church."
+      render :show
+    end
+  end
+
+
   private
 
   # Strong Parameters
