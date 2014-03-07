@@ -1,7 +1,5 @@
 #Planning
 
-<%= render partial: 'favorites/favorite', locals: { church: @church } %>
-
 Models:
 Users
 Churches

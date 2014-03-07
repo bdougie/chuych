@@ -48,7 +48,9 @@ class AvatarUploader < CarrierWave::Uploader::Base
     process :resize_to_fill => [50, 50]
   end
 
-
+  def default_url
+    '/assets/default.jpeg'
+  end
 
 
   # Add a white list of extensions which are allowed to be uploaded.

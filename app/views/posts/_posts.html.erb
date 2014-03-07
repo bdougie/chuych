@@ -1,10 +1,10 @@
 <div class="list-group">
 	<% @posts.each do |post| %>
-	  <a href="#" class="list-group-item">
+	  <div class="list-group-item">
 	    <h4 class="list-group-item-heading"><%= post.user.name %></h4>
 	    <p class="list-group-item-text">
 	    	<div class='pull-left'>
-			 	<%= image_tag(post.user.avatar.small.url) if post.user.avatar? %>
+			 	<%= image_tag(post.user.avatar.small.url) %>
 				</div>
 	    	<%= post.body %>
 	    	submitted <%= time_ago_in_words(post.created_at) %> ago by
@@ -12,7 +12,7 @@
 
 			 	<!--<add link_to user_path, to the @username-->
 	    </p>
-	  </a>
+	  </div>
   
   <% end %>
 </div>
