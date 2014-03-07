@@ -10,7 +10,7 @@
 * Implement all models
 * Identify roles
 
-- [  ] verions 0.0.3
+- [ x ] verions 0.0.3
 
 * implement the ability to create shares/comments and display them on page
 * Add CanCan abilities as well as Voting and Favoriting

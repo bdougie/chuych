@@ -5,10 +5,12 @@
 	    <p class="list-group-item-text">
 	    	<%= church.city %><br/>
 			 	<%= church.description %>
-	    </p>
+		  </p>
+			  <%= render partial: 'favorites/favorite', locals: { church: church } %>
+
+	    
 	  </a>
   <% end %>
 </div>
 
 
-    <%= render partial: 'favorites/favorite', locals: { church: @church } %>

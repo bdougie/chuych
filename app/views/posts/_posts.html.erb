@@ -6,9 +6,9 @@
 	    	<div class='pull-left'>
 			 	<%= image_tag(post.user.avatar.small.url) if post.user.avatar? %>
 				</div>
-	    	<%= post.body %><br/>
+	    	<%= post.body %>
 	    	submitted <%= time_ago_in_words(post.created_at) %> ago by
-			 	@<%= post.user.username %>
+			 	@<%= link_to post.user.username, post %>
 
 			 	<!--<add link_to user_path, to the @username-->
 	    </p>

@@ -6,7 +6,7 @@ This is a church reviews site
 
 * Has User generated reviews
 
-* Share info on churches in a specific area
+* Share info on churches in a specific city
 
 * etc...
 
