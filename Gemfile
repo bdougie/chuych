@@ -14,6 +14,7 @@ gem 'fog'
 gem 'figaro'
 gem 'faker'
 gem 'will_paginate', '~> 3.0'
+gem 'pry'
 #search 
 gem "geocoder"
 gem 'acts-as-taggable-on'
