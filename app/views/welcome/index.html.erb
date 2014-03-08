@@ -14,14 +14,14 @@
   <div class="tabbable tabs-left">
     <ul class="nav nav-tabs">
       <li class="active"><a href="#posts" data-toggle="tab">Posts</a></li>
-      <li class="active"><a href="#churches" data-toggle="tab">Churches</a></li>
+      <li><a href="#churches" data-toggle="tab">Churches</a></li>
 
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="posts">
 				<%= render partial: 'posts/posts', locals: {posts: @posts} %>
 			</div>
-			<div class="tab-pane active" id="churches">
+			<div class="tab-pane" id="churches">
 				<%= render partial: 'churches/churches', locals: {churches: @churches} %>
 			</div>
 		</div>
