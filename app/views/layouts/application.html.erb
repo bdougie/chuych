@@ -11,11 +11,10 @@
 <body>
 
 	<div class="container">
-    <% if current_user %> 
     
     <ul class="nav nav-tabs">
     	<li><%=link_to "Stream[Home]", root_path %></li>
-      <li><%=link_to "Feedback", new_post_path %></li>
+      <li><%=link_to "Post", new_post_path %></li>
       <li><%=link_to "Churches", churches_path %></li>
 
       <div class="pull-right user-info">
@@ -35,7 +34,6 @@
           <li><%= link_to "Sign In", new_user_session_path %> or</li>
           <li><%= link_to "Sign Up", new_user_registration_path %></li>
         <% end %>
-    <% end %>
     </ul>
 
      <% if flash[:notice] %>
