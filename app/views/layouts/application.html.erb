@@ -13,9 +13,14 @@
 	<div class="container">
     
     <ul class="nav nav-tabs">
-    	<li><%=link_to "Stream[Home]", root_path %></li>
+    	<li><%=link_to root_path, class: 'btn btn-mini' do %>
+        <i class="glyphicon glyphicon-home"> </i>
+        <% end %>
+      </li>
       <li><%=link_to "Post", new_post_path %></li>
       <li><%=link_to "Churches", churches_path %></li>
+      <li><%=link_to "Followed Churches", '#' %></li>
+
 
       <div class="pull-right user-info">
         <% if current_user %>
@@ -27,7 +32,7 @@
             <i class="glyphicon glyphicon-user"> </i>
           <% end %>
           <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-mini' do %>
-            <i class="glyphicon glyphicon-pencil"> </i>
+            <i class="glyphicon glyphicon-off"> </i>
           <% end %>
         <% else %>
   
