@@ -1,13 +1,15 @@
-<div class="panel panel-primary">
-  <div class="panel-heading">
+<h1><%= @church.name %></h1>
 
-		<h1><%= @church.name %></h1>
-	</div></br>
-	<p>Located in: <%= @church.city %></p>
+<% if can? :edit, @post %>
+  <div class="pull-right">
+  <%= link_to "Edit", edit_church_path(@church), class: 'btn btn-block btn-default' %>
+  
+	<%= link_to "Delete", @church, method: :delete, class: 'btn btn-large btn-block btn-danger', confirm: 'Are you sure you want to delete this church?' %>
+ 	</div>
+<% end %>
+<p>Located in: <%= @church.city %></p>
 
-	<p>"<%= @church.description %>"</p>
+<p>Description: <%= @church.description %></p>
 
-	<p><%= @church.tag_list %></p>
-	<p><%= @church.denomination_list %></p>
-
-</div>
+<p><%= @church.tag_list %></p>
+	<p>Denomination: <%= @church.denomination_list %></p>

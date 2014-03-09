@@ -1,17 +1,33 @@
+<!-- 
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="..." alt="...">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">Media heading</h4>
+    ...
+  </div>
+</div> -->
+
 <div class="list-group">
-	<% posts.each do |post| %>
+	<% posts.each do |post| %> 
+			 	<!--<post.each does not work-->
 	  <div class="list-group-item">
 	    <h4 class="list-group-item-heading"><%= post.user.name %></h4>
-	    <p class="list-group-item-text">
 	    	<div class='pull-left'>
-				 	<%= image_tag(post.user.avatar.small.url, width: 50, height: 50) %>
+	    		<img class="media-object"
+				 	<%= image_tag(post.user.avatar.small.url, width: 50, height: 50)  %>>
 				</div>
-	    	<%= post.body %>
-	    	submitted <%= time_ago_in_words(post.created_at) %> ago by
-			 	@<%= link_to post.user.username, post %>
+		    <p class="list-group-item-text" id='posts'>
 
-			 	<!--<add link_to user_path, to the @username-->
-	    </p>
+			    <div class="media-body">
+		    	<%= post.body %>
+		    	submitted <%= time_ago_in_words(post.created_at) %> ago by
+				 	@<%= link_to post.user.username, post %>
+				 </div>
+
+				 	<!--<add link_to user_path, to the @username-->
+		    </p>
 	  </div>
   
   <% end %>
