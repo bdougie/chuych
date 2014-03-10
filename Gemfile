@@ -15,6 +15,8 @@ gem 'figaro'
 gem 'faker'
 gem 'will_paginate', '~> 3.0'
 gem 'pry'
+gem 'letsrate'
+gem 'gmaps4rails'
 #search 
 gem "geocoder"
 gem 'acts-as-taggable-on'

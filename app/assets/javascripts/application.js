@@ -15,6 +15,8 @@
 //= require bootstrap
 //= require turbolinks
 //= require jquery.geocomplete.min
+//= require underscore
+//= require gmaps/google
 //= require_tree .
 
 

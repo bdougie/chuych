@@ -86,6 +86,7 @@ GEM
       ruby-hmac
     formatador (0.2.4)
     geocoder (1.1.9)
+    gmaps4rails (2.1.2)
     hashie (2.0.5)
     highline (1.6.21)
     hike (1.2.3)
@@ -99,6 +100,7 @@ GEM
     json (1.8.1)
     jwt (0.1.11)
       multi_json (>= 1.5)
+    letsrate (1.0.9)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -248,8 +250,10 @@ DEPENDENCIES
   figaro
   fog
   geocoder
+  gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails
+  letsrate
   mini_magick
   omniauth-facebook
   omniauth-twitter

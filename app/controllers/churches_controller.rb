@@ -10,6 +10,10 @@ class ChurchesController < ApplicationController
     else
       @churches = Church.all
     end
+    @hash = Gmaps4rails.build_markers(@churches) do |church, marker|
+      marker.lat church.latitude
+      marker.lng church.longitude
+    end
      # @churches = Church.paginate(page: params[:page], per_page: 10)
     
   end
@@ -31,6 +35,10 @@ class ChurchesController < ApplicationController
 
   def show
     @church = Church.find(params[:id])
+    @hash = Gmaps4rails.build_markers(@church) do |church, marker|
+      marker.lat church.latitude
+      marker.lng church.longitude
+    end
   end
 
   def edit
