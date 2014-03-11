@@ -4,6 +4,8 @@ class Church < ActiveRecord::Base
 	acts_as_taggable_on :denominations, :tags
 
 	has_many :favorites, dependent: :destroy
+	has_many :posts
+
 
 	geocoded_by :city
 	after_validation :geocode

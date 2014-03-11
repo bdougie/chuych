@@ -75,3 +75,9 @@ http://www.rubygeocoder.com/
 churchrater.com
 churchfinder.com
 
+extract tags with acts_as_taggable
+http://stackoverflow.com/questions/5307331/implementing-twitter-like-hashtag-on-rails
+
+***favorite 'church' but 'like' posts
+reviews will be post and only short messages. church will have a rating later.
+
