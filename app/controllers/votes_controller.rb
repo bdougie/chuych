@@ -14,7 +14,7 @@ class VotesController < ApplicationController
 	private
 
 	def setup
-		@post = Post.find(params[:post_id])
+		@post = Post.find(vote_params[:post_id])
 		authorize! :create, Post, message: "You need to be a user to do that."
 
 		@vote = @post.posts.where(user_id: current_user.id).first
@@ -27,4 +27,12 @@ class VotesController < ApplicationController
 			@post = current_user.posts.create(value: new_value, post: @post)
 		end
 	end
+
+
+	 private
+
+  # Strong Parameters
+   def vote_params
+     params.require(:post).permit(:value, :post)
+   end
 end
