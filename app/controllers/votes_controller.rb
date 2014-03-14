@@ -33,6 +33,6 @@ class VotesController < ApplicationController
 
   # Strong Parameters
    def vote_params
-     params.require(:post).permit(:value, :post)
+     params.require(:vote).permit(:valuer)
    end
 end
