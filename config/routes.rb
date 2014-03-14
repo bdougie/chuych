@@ -4,15 +4,15 @@ Chuych::Application.routes.draw do
     resources :favorites, only: [:create, :destroy]
 
       resources :posts, only: [:index, :edit, :show, :new, :create, :edit] do
-      match '/up-vote', to: 'votes#up_vote', as: :up_vote # havent implemented voting yet.
-      match '/down-vote', to: 'votes#down_vote', as: :down_vote
+      get '/up-vote', to: 'votes#up_vote', as: :up_vote # havent implemented voting yet.
+      get '/down-vote', to: 'votes#down_vote', as: :down_vote
     end
   end
 
   resources :welcome, only: [:index, :new] 
   resources :favorites, only: [:index]
 
-  root 'welcome#new'
+  root :to => 'welcome#new'
 
   # devise_for :users, controllers: {omniauth_callbacks:'users/omniauth_callbacks'}
   # added the below for twitter
