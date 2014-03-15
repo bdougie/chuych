@@ -1,4 +1,4 @@
-<%= form_for post do |f| %>
+<%= form_for [church, post] do |f| %>
 	<div class="form-group">
     <%= f.label :body, 'Add to conversation' %>
     <%= f.text_field :body, class: "form-control", placeholder: 'How was church?' %>

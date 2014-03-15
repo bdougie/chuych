@@ -1,2 +1,6 @@
-<h1>Church#edit</h1>
-<p>Find me in app/views/church/edit.html.erb</p>
+<h1><%= @church.name %></h1>
+
+<p>Is something missing, just update and save it</p>
+
+
+	<%= render partial: 'form', locals: { church: @church, post: @post } %> 
