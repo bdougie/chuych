@@ -2,8 +2,8 @@
 
 <br/>
 
-<%= render partial: 'form', locals: {post: @post} %>
+<%= render partial: 'form', locals: {church: @church, post: @post} %>
 
-<%= render partial: "posts", locals: {posts: @posts} %>
+<%= render partial: "posts", locals: {church: @church, posts: @posts} %>
 
 <%= will_paginate @posts %>

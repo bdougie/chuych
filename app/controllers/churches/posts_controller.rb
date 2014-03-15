@@ -8,8 +8,10 @@ class Churches::PostsController < ApplicationController
 	end
 
 	def new
+	  @church = Church.find(params[:church_id])
+	  
 		@post = Post.new
-		@posts = Post.all
+		# @posts = Post.all
 		@posts = Post.paginate(page: params[:page], per_page: 10)
 
 	end
@@ -38,12 +40,11 @@ class Churches::PostsController < ApplicationController
 	def create
       
 	  @church = Church.find(params[:church_id])
-		@post = Post.new(post_params)
 
+		@post = Post.new(post_params)
     @post.church = @church
 		# @post = current_user.posts.build(params[:post])
 		@post.user = current_user
-
 		@post.save
 		authorize! :create, Post, message: "You need to be a member to create a post."
 
