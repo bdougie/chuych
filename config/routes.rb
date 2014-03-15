@@ -1,6 +1,5 @@
 Chuych::Application.routes.draw do
 
- resources :posts, only: [:index] # add only after implement nesting 
  
   resources :churches do
     resources :favorites, only: [:create, :destroy]
@@ -11,6 +10,7 @@ Chuych::Application.routes.draw do
     end
   end
 
+  resources :posts, only: [:index]
   resources :welcome, only: [:index, :new] 
   resources :favorites, only: [:index]
 

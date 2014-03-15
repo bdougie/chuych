@@ -1,2 +1,15 @@
-<h1>Look at Post#index</h1>
+<h1>Churches</h1>
+<p>Dont see the church you are looking for? Try creating it.</p>
+
+<div class='pull-right'>
+	<%= link_to "Create a new church", new_church_path, class: "btn btn-primary" %>
+</div>
+
+	<%= render 'search_form' %>
+
+
+
+<div class="box panel panel-default">
+	<%= render partial: 'churches/churches', locals: {churches: @churches} %>
+</div>
 
