@@ -1,6 +1,8 @@
 Chuych::Application.routes.draw do
 
  
+  get "visitor/new"
+  get "visitor/create"
   resources :churches do
     resources :favorites, only: [:create, :destroy]
 
@@ -13,6 +15,7 @@ Chuych::Application.routes.draw do
   resources :posts, only: [:index]
   resources :welcome, only: [:index, :new] 
   resources :favorites, only: [:index]
+  resources :visitors, only: [:new, :create]
 
   root :to => 'welcome#new'
 

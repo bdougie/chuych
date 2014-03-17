@@ -38,6 +38,7 @@ class ChurchesController < ApplicationController
     @hash = Gmaps4rails.build_markers(@church) do |church, marker|
       marker.lat church.latitude
       marker.lng church.longitude
+    @post = Post.new
     end
   end
 

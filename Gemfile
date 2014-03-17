@@ -17,6 +17,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'pry'
 gem 'letsrate'
 gem 'gmaps4rails'
+gem 'gibbon'
 #search 
 gem "geocoder"
 gem 'acts-as-taggable-on'
