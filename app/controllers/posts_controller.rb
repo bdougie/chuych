@@ -19,20 +19,21 @@ class PostsController < ApplicationController
 
 		if @post.save
 			flash[:notice] = "Post was saved."
-			reder 
+			redirect_to @church
 		else
 			flash[:error] = "There was an error saving the post. Please try again."
 			render :new
 		end
 	end
 
-	
+
   private
 
   # Strong Parameters
-   def church_params
-     params.require(:church).permit(:name, :city, :description, :tag_list, :denomination_list)
-   end
+   def post_params
+     params.require(:post).permit(:body)
+	end
+
 
 
 end

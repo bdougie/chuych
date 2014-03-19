@@ -50,7 +50,7 @@ class Churches::PostsController < ApplicationController
 
 		if @post.save
 			flash[:notice] = "Post was saved."
-			redirect_to welcome_index_path
+			redirect_to @church
 		else
 			flash[:error] = "There was an error saving the post. Please try again."
 			render :new
