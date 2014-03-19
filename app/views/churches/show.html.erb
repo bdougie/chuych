@@ -23,7 +23,9 @@
 	<p>Denomination: <%= @church.denomination_list %></p>
 
 
-<%= render 'churches/posts/form', locals: { church: @church, post: @post }%>
+<%= render partial: 'churches/posts/form', locals: { church: @church, post: @post }%>
+
+
 
 <div style='width: 800px;'>
   <div id="map" style='width: 800px; height: 400px;'></div>
