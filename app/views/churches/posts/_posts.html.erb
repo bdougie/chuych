@@ -23,7 +23,7 @@
 			    <div class="media-body">
 		    	<%= post.body %>
 		    	submitted <%= time_ago_in_words(post.created_at) %> ago by
-				 	@<%= link_to post.user.username, church %>
+				 	@<%= link_to post.user.username, '#' %>
 				 </div>
 
 				 	<!--<add link_to user_path, to the @username-->
