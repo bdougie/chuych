@@ -4,6 +4,12 @@ class PostsController < ApplicationController
     # @posts = Post.all
       @posts = Post.limit(20)
 
+      @church = Church.find(params[:church_id])
+		  @posts = @church.posts
+
+  	@user = User.find(params[:id])
+		@posts = @user.posts
+
   end
 
   def create
@@ -24,6 +30,10 @@ class PostsController < ApplicationController
 			flash[:error] = "There was an error saving the post. Please try again."
 			render :new
 		end
+	end
+
+	def show
+		@post = Post.find(params[:id])
 	end
 
 
