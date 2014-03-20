@@ -1,9 +1,0 @@
-<!-- Create a Post -->
-
-<br/>
-
-<%= render partial: 'form', locals: {post: @post} %>
-
-<%= render partial: "posts", locals: {posts: @posts} %>
-
-<%= will_paginate @posts %>
