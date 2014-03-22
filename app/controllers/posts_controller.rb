@@ -7,8 +7,8 @@ class PostsController < ApplicationController
       @church = Church.find(params[:church_id])
 		  @posts = @church.posts
 
-  	@user = User.find(params[:id])
-		@posts = @user.posts
+	  # 	@user = User.find(params[:id])
+			# @posts = @user.posts
 
   end
 
