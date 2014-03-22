@@ -1,6 +1,6 @@
 == README
 
-#Church
+#Chuych
 
 This is a church reviews site
 
