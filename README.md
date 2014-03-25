@@ -18,3 +18,5 @@ Copy the "config/application.example.yml" file and remove "example". Your applic
     $ bundle
     $ rake db:create
     $ rake db:migrate
+
+  The end
