@@ -9,37 +9,7 @@
 
 </head>
 <body>
-
-	<div class="container">
-    
-    <ul class="nav nav-tabs">
-    	<li><%=link_to root_path, class: 'btn btn-mini' do %>
-        <i class="glyphicon glyphicon-home"> </i>
-        <% end %>
-      </li>
-      <li><%=link_to "Find Churches", churches_path %></li>
-      <li><%=link_to "Chuych Updates", 'http://chuych.ghost.io' %></li>
-
-
-
-      <div class="pull-right user-info">
-        <% if current_user %>
-        
-         <%= link_to image_tag(current_user.avatar.tiny.url), current_user if current_user.avatar? %>
-
-        Hello <%= link_to (current_user.name || current_user.email), current_user %>!
-          <%= link_to edit_user_registration_path, class: 'btn btn-mini' do %>
-            <i class="glyphicon glyphicon-user"> </i>
-          <% end %>
-          <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-mini' do %>
-            <i class="glyphicon glyphicon-off">  </i>
-          <% end %>
-        <% else %>
-  <!-- new_user_registration_path & (sign_in)new_user_session_path -->
-         <!--  <%= link_to "Sign In", '#' %> or
-          <%= link_to "Sign Up", '#'  %> -->
-        <% end %>
-    </ul>
+  <%= render 'layouts/header' %>
 
      <% if flash[:notice] %>
       <div class="alert alert-success">
