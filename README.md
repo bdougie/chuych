@@ -19,4 +19,3 @@ Copy the "config/application.example.yml" file and remove "example". Your applic
     $ rake db:create
     $ rake db:migrate
 
-  The end
