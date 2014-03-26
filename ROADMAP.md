@@ -22,6 +22,7 @@
 
 - [  ] verions 0.0.5
 * Complete Front End design
+- botstrap all the way
 
 - [  ] verions 0.0.6
 
