@@ -4,7 +4,7 @@ class Church < ActiveRecord::Base
 	acts_as_taggable_on :denominations, :tags
 
 	has_many :favorites, dependent: :destroy
-	has_many :posts
+	has_many :posts, dependent: :destroy
 
   mount_uploader :image, ImageUploader
 

@@ -4,6 +4,7 @@
 <h1><%= @church.name %></h1>
 
 <div class="pull-right">
+	<%= @church.image %>
   <%= render partial: 'favorites/favorite', locals: { church: @church } %>
 </div>
 
@@ -22,8 +23,9 @@
 <p><%= @church.tag_list %></p>
 	<p>Denomination: <%= @church.denomination_list %></p>
 
-
-<%= render partial: 'churches/posts/form', locals: { church: @church, post: @post }%>
+<% if user_signed_in? %>
+	<%= render partial: 'churches/posts/form', locals: { church: @church, post: @post }%>
+<% end %>
 
 <%= render partial: 'churches/posts/posts', locals: { church: @church, post: @post }%>
 

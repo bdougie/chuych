@@ -1,4 +1,9 @@
 <%= form_for @church do |f| %>
+   <div class="form-group">
+    <%= f.label :image %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  
 	<div class="form-group">
     <%= f.label :name, 'Church Name' %>
     <%= f.text_field :name, class: "form-control" %>
