@@ -2,10 +2,10 @@
 <script src='//google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js' type='text/javascript'></script>
 
 <h1><%= @church.name %></h1>
+  <%= render partial: 'favorites/favorite', locals: { church: @church } %>
 
 <div class="pull-right">
-	<%= @church.image %>
-  <%= render partial: 'favorites/favorite', locals: { church: @church } %>
+  <%= image_tag(@church.image) if @church.image? %>
 </div>
 
 

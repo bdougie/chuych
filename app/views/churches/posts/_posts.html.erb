@@ -21,7 +21,7 @@
 		    <p class="list-group-item-text" id='posts'>
 
 			    <div class="media-body">
-		    	<%= post.body %>
+		    	<%= post.body %><br/>
 		    	submitted <%= time_ago_in_words(post.created_at) %> ago by
 				 	@<%= link_to post.user.username, '#' %>
 				 </div>
