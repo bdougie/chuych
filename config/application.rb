@@ -39,5 +39,6 @@ module Chuych
 
     config.assets.initialize_on_precompile = false
     # config.active_record.whitelist_attributes = false
+    config.serve_static_assets = true
   end
 end
