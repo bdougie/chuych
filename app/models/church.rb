@@ -6,6 +6,8 @@ class Church < ActiveRecord::Base
 	has_many :favorites, dependent: :destroy
 	has_many :posts
 
+  mount_uploader :image, ImageUploader
+
 
 	geocoded_by :city
 	after_validation :geocode
