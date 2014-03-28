@@ -81,3 +81,7 @@ http://stackoverflow.com/questions/5307331/implementing-twitter-like-hashtag-on-
 ***favorite 'church' but 'like' posts
 reviews will be post and only short messages. church will have a rating later.
 
+http://www.gothamcoworking.com/#/
+
+foursquare
+
