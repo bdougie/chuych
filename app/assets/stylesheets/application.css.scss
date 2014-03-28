@@ -19,6 +19,12 @@ img {
   margin: 0px 10px 0px 10px;
 }
 
+/*img { I would like to apply these CSS attributes to only the church image
+  border: 1px solid black;
+  border-radius: 40px;
+  margin: -70px 200px 25px 10px;
+}*/ 
+
 .churchPhotoWrapper {
   max-height: 50px;
 }
@@ -42,5 +48,5 @@ img {
 }
 
 .churcy {
-  padding: 100px 100px 200px 100px;
+  margin: auto;
 }
