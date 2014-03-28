@@ -1,18 +1,21 @@
-<h1>Churches</h1>
-<p>Dont see the church you are looking for? Try creating it.</p>
+<div class="container">
+	<h1>Churches</h1>
+	<p>Dont see the church you are looking for? Try creating it.</p>
 
-<div class='pull-right'>
-	<%= link_to "Create a new church", new_church_path, class: "btn btn-primary" %>
+		<div class='pull-right'>
+			<%= link_to "Create a new church", new_church_path, class: "btn btn-primary" %>
+		</div>
+
+		<div>
+			<%= render 'search_form' %>
+		</div>
+
+		<div id="churches">
+			<%= render partial: 'churches/churches', locals: {churches: @churches} %>
+		</div>
 </div>
 
-<div>
-	<%= render 'search_form' %>
-</div>
-
-<div id="churches">
-	<%= render partial: 'churches/churches', locals: {churches: @churches} %>
-</div>
-
-
-<hr/><br/>
+		<hr/><br/>
+<div class="paginate">		
 	<%= will_paginate @churches %>
+<div>
