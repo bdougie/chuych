@@ -1,27 +1,13 @@
 <div class="list-group">
 	<% churches.each do |church| %>
 
-	<ul class="churchList">
-		<!-- <li class> -->
-			<div class="churchPhotoWrapper">
-	        <div class="col-md-4">
-	          <div class="panel panel-default">
-	            <div class="panel-heading"><h3><%= link_to church.name, church %></h3></div>
-	            <div class="panel-body">
-	            	<p>
-	            		<%= link_to church.city, churches_path(near: church.city) %><br/>
-								 	<%= church.description %>
-							  </p>
-								  <%= render partial: 'favorites/favorite', locals: { church: church } %>
-						    
-						  </div>
-						</div>
-					</div>	
-			</div>
-		<!-- </li>		 -->
-	</ul>			  
-	 
+	  <a href='/church/' class="list-group-item">
+	    <h4 class="list-group-item-heading"><%= church.name %></h4>
+	    <p class="list-group-item-text">
+	    	<%= church.city %><br/>
+			 	<%= church.description %>
+	    </p>
+	  </a>
+
   <% end %>
 </div>
-
-
