@@ -15,7 +15,7 @@
 * implement the ability to create shares/comments and display them on page
 * Add CanCan abilities as well as Voting and Favoriting
 
-- [ x ] verions 0.0.4
+- [  ] verions 0.0.4
 
 * Add Maps and marker 
 * Implement existing church or location database

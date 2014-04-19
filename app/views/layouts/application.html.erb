@@ -8,7 +8,9 @@
   <%= csrf_meta_tags %>
 
 </head>
+
 <body>
+
   <%= render 'layouts/header' %>
 
      <% if flash[:notice] %>
@@ -26,10 +28,13 @@
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         <%= flash[:alert] %>
       </div>
-    <% end %>
+    <% end %>    
 
 <%= yield %>
 	</div>
 
 </body>
+<foot>
+  <%= render 'layouts/footer' %>
+</foot>
 </html>

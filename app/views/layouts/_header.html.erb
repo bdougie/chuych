@@ -5,8 +5,10 @@
         <i class="glyphicon glyphicon-home"> </i>
         <% end %>
       </li>
+      <li><%=link_to "Welcome Page", welcome_index_path %></li>
       <li><%=link_to "Find Churches", churches_path %></li>
       <li><%=link_to "Chuych Updates", 'http://chuych.ghost.io' %></li>
+
 
 
 
@@ -24,7 +26,6 @@
           <% end %>
         <% else %>
   <!-- new_user_registration_path & (sign_in)new_user_session_path -->
-         <!--  <%= link_to "Sign In", '#' %> or
-          <%= link_to "Sign Up", '#'  %> -->
+           <%= link_to "Sign In", new_user_session_path %> or <%= link_to "Sign Up", new_user_registration_path  %>
         <% end %>
     </ul>

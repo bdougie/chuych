@@ -3,6 +3,7 @@ Chuych::Application.routes.draw do
  
   get "visitor/new"
   get "visitor/create"
+  get "churches/index"
   resources :churches do
     resources :favorites, only: [:create, :destroy]
 
