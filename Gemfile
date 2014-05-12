@@ -19,6 +19,7 @@ gem 'pry'
 gem 'letsrate'
 gem 'gmaps4rails'
 gem 'gibbon'
+gem 'newrelic_rpm'
 #search 
 gem "geocoder"
 gem 'acts-as-taggable-on'
