@@ -7,7 +7,7 @@ class FavoritesController < ApplicationController
     if favorite.valid?
       flash[:notice] = "Followed church"
       redirect_to @church
-    	
+
     else
       flash[:error] = "Unable to add follow. Please try again."
       redirect_to @church
@@ -26,14 +26,14 @@ class FavoritesController < ApplicationController
   else
     flash[:error] = "Unable to remove favorite. Please try again."
       redirect_to @church
-    
+
   end
 end
 
- private 
-
+ private
+#test for functionality
  # 	def favorite_params
- #     params.require(:church).permit(:favorti)
+ #     params.require(:church).permit(:favorite)
 	# end
 
 end
