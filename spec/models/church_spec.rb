@@ -2,23 +2,18 @@ require 'spec_helper'
 
 
 describe Church do
+	let(:church) { FactoryGirl.build(:church) }
+
 	context "checking validation" do
-	  it "is valid with a name" do 
-	  	church = Church.new(name: 'Jesus')
-	  	expect(church.name).to eq('Jesus')
-	 	end
-	  it "is valid with a description" do
-	  	church = Church.new(description: 'river')
-	  	expect(church.description).to eq('river')
-	  end
-	  it "is valid with a city" do
-	    church = Church.new(city: 'Tampa')
+	  it "is valid with a name, description, and city" do
+	  	expect(church.name).to eq('Walmart Church')
+	  	expect(church.description).to eq("There's a man, in a van, down by the river!")
 	  	expect(church.city).to eq('Tampa')
+	  	expect(church).to have(0).errors_on(:church)
 	  end
 	 end
 
 	context "checking invalidation" do
-	   # church = Church.create(name: 'bill'
 		it "is invalid without name" do
 			expect(FactoryGirl.build(:church, name: nil)).to have(1).errors_on(:name)
 		end
@@ -32,17 +27,21 @@ describe Church do
 		end
 
 		it 'is invalid with description less 10 characters' do
-			# (Church.create(description: 'this is a descriptiojjjjjjjjjjjjjjjjjjjjjjjjjnj')).should have(20).characters
+			expect(Church.create(description: 'this is a descriptiojjjjjjjjjjjjjjjjjjjjjjjjjnj')).to_not have(1).errors_on(:description)
 			expect(Church.new(description: 'this is a description')).to_not be_valid
 		end
-	end 
+	end
 
 	context 'Checking if a new church is created' do
 		it 'is able to be saved' do
-			# church = Church.create
-
 	    expect{FactoryGirl.create(:church)}.to change{Church.count}.from(0).to(1)
 	  end
 	end
-	
+
+	context 'Checking church location is saved and recorded' do
+		it "should save latitude and longitude by city" do
+			expect(church.latitude).to be(nil)
+		end
+	end
+
 end
