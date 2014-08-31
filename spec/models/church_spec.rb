@@ -38,8 +38,9 @@ describe Church do
 	  end
 	end
 
-	context 'Checking church location is saved is recorded' do
+	context 'Checking church location is saved and recorded' do
 		it "should save latitude and longitude by city" do
+			expect(church.latitude).to not_be(nil)
 		end
 	end
 
