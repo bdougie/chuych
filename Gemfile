@@ -17,11 +17,13 @@ gem 'will_paginate', '~> 3.0'
 gem 'pry'
 gem 'letsrate'
 gem 'gmaps4rails'
-#search 
+
+#search
 gem "geocoder"
 gem 'acts-as-taggable-on'
 gem 'sunspot_rails'
 gem 'progress_bar' # added for sunspot
+
 #login gems
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
@@ -44,7 +46,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'capybara'
-  #added for sunspot/solr 
+  #added for sunspot/solr
   gem 'sunspot_solr'
 end
 
