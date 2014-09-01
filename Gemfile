@@ -18,17 +18,17 @@ gem 'pry'
 gem 'letsrate'
 gem 'gmaps4rails'
 
-#search
+#/search/
 gem "geocoder"
 gem 'acts-as-taggable-on'
 gem 'sunspot_rails'
 gem 'progress_bar' # added for sunspot
 
-#login gems
+#/login gems/
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 
-#assets
+#/assets/
 gem 'sass-rails', '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.0.3'
@@ -46,7 +46,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'capybara'
-  #added for sunspot/solr
+  #added for sunspot/solr to be implemented at a later date
   gem 'sunspot_solr'
 end
 
@@ -54,6 +54,4 @@ group :development do
   gem 'sqlite3'
 end
 
-# Gems used only for assets and not required
-# in production environments by default.
 
