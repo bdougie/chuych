@@ -103,8 +103,7 @@ GEM
       multi_json (>= 1.5)
     launchy (2.4.2)
       addressable (~> 2.3)
-    letsrate (1.0.9)
-    letter_opener (1.2.0)
+    letter_opener (1.1.2)
       launchy (~> 2.2)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -258,8 +257,7 @@ DEPENDENCIES
   gmaps4rails
   jbuilder (~> 1.2)
   jquery-rails
-  letsrate
-  letter_opener
+  letter_opener (= 1.1.2)
   mini_magick
   omniauth-facebook
   omniauth-twitter
