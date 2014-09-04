@@ -2,6 +2,10 @@ class Church < ActiveRecord::Base
 	acts_as_taggable
 	acts_as_taggable_on :denominations, :tags
 
+	validates :name, presence: true
+  validates :city, presence: true
+	validates :description, length: { minimum: 10 }
+
 	has_many :favorites, dependent: :destroy
 
 	geocoded_by :city
@@ -12,9 +16,5 @@ class Church < ActiveRecord::Base
 	# searchable do
 	# 	text :city, :latitude, :longitude
 	# end
-
-	validates :name, :city, presence: true
-	validates :description, length: { minimum: 10 }
-
 
 end

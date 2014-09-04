@@ -15,15 +15,18 @@ describe Church do
 
 	context "checking invalidation" do
 		it "is invalid without name" do
-			expect(FactoryGirl.build(:church, name: nil)).to have(1).errors_on(:name)
+			church.update_attributes(name: nil)
+			expect(church.errors[:name]).to_not be_empty
 		end
 
 		it "is invalid without a city" do
-			expect(Church.create(city: nil)).to have(1).errors_on(:city)
+			church.update_attributes(city: nil)
+      expect(church.errors[:city]).to_not be_empty
 		end
 
 		it "is invalid without a description" do
-			expect(Church.create(description: nil)).to have(1).errors_on(:description)
+			church.update_attributes(description: nil)
+      expect(church.errors[:description]).to_not be_empty
 		end
 
 		it 'is invalid with description less 10 characters' do
@@ -34,12 +37,14 @@ describe Church do
 
 	context 'Checking if a new church is created' do
 		it 'is able to be saved' do
-	    expect{FactoryGirl.create(:church)}.to change{Church.count}.from(0).to(1)
+	    expect(church.valid?).to be(true)
 	  end
 	end
 
 	context 'Checking church location is saved and recorded' do
+
 		it "should save latitude and longitude by city" do
+			# TODO update to check geolocation works
 			expect(church.latitude).to be(nil)
 		end
 	end
