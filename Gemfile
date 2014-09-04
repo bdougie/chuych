@@ -43,10 +43,11 @@ group :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'factory_girl_rails', '~> 4.0'
   gem 'capybara'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'letter_opener'
   #added for sunspot/solr to be implemented at a later date
+  gem 'rspec-rails'
   gem 'sunspot_solr'
 end
 
