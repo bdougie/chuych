@@ -1,8 +1,8 @@
 class ChurchesController < ApplicationController
 
   def index
-    #search method is undefined. 
-    # @search = Church.search do 
+    #search method is undefined.
+    # @search = Church.search do
     #   fulltext params[:search]
     # end
     if params[:near]
@@ -14,29 +14,27 @@ class ChurchesController < ApplicationController
       marker.lat church.latitude
       marker.lng church.longitude
     end
-      @churches = Church.paginate(page: params[:page], per_page: 9)
-    
+     # @churches = Church.paginate(page: params[:page], per_page: 10)
+
   end
 
   def new
-  	@church = Church.new
+    @church = Church.new
   end
 
   def create
-	 @church = Church.new(church_params)
-   if @church.save   
+   @church = Church.new(church_params)
+   if @church.save
      flash[:notice] = "Church was saved successfully."
      redirect_to @church
    else
      flash[:error] = "Error creating church. Please try again."
      render :new
    end
-  end	
+  end
 
   def show
     @church = Church.find(params[:id])
-    @post = Post.new
-
     @hash = Gmaps4rails.build_markers(@church) do |church, marker|
       marker.lat church.latitude
       marker.lng church.longitude
@@ -74,7 +72,7 @@ class ChurchesController < ApplicationController
 
   # Strong Parameters
    def church_params
-     params.require(:church).permit(:name, :city, :description, :tag_list, :denomination_list, :image)
+     params.require(:church).permit(:name, :city, :description, :tag_list, :denomination_list)
    end
 
 end

@@ -1,15 +1,41 @@
-# require 'spec_helper'
+require 'spec_helper'
 
-# describe User do
-# 	# skip_confirmation :password
-# 	context "user validations" do
-#  #  it "is has a name" do
-# 	# 	expect{FacoryGirl.build(:user)}.to eq('brian')
-# 	# end
+describe User do
+  let(:user) { FactoryGirl.build(:user) }
 
-# 		it 'can create a new user' do
-# 	    expect{FactoryGirl.create(:user)}.to change{User.count}.from(0).to(1)
+  context "checking invalidation" do
+    it "can create a new user" do
+      expect(user.valid?).to eq(true)
+    end
 
-# 		end
-# 	end
-# end
+    it "is has a name" do
+      expect(user.name).to eq('brian')
+      expect(user.errors[:name]).to be_empty
+    end
+
+    it "is has a email" do
+      expect(user.email).to eq('me@me.com')
+      expect(user.errors[:email]).to be_empty
+    end
+
+    it "is has a username" do
+      expect(user.username).to eq('brianllamar')
+      expect(user.errors[:username]).to be_empty
+    end
+  end
+
+  context "checking invalidation" do
+    it "should fail validation without a username" do
+      user.username = nil
+      expect(user.valid?).to eq(false)
+      expect(user.errors[:username]).to_not be_empty
+    end
+
+    it "should fail validation without a email" do
+      user.email = nil
+      expect(user.valid?).to eq(false)
+      expect(user.errors[:email]).to_not be_empty
+    end
+  end
+
+end

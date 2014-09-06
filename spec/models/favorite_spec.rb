@@ -1,5 +1,10 @@
 require 'spec_helper'
 
 describe Favorite do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) { FactoryGirl.build(:user) }
+  let(:church) { FactoryGirl.build(:church) }
+
+  it "should allow a user to follow a church" do
+    expect(user.favorites(church)).to be_true
+  end
 end

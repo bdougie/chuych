@@ -1,7 +1,10 @@
 class Church < ActiveRecord::Base
-	# attr_accessible :name, :description, :city, :tag_list no longer acceptable in rails 4
 	acts_as_taggable
 	acts_as_taggable_on :denominations, :tags
+
+	validates :name, presence: true
+  validates :city, presence: true
+	validates :description, length: { minimum: 10 }
 
 	has_many :favorites, dependent: :destroy
 	has_many :posts, dependent: :destroy
@@ -18,8 +21,4 @@ class Church < ActiveRecord::Base
 	# 	text :city, :latitude, :longitude
 	# end
 
-	validates :name, :city, presence: true
-	validates :description, length: { minimum: 10 }
-
-	
 end

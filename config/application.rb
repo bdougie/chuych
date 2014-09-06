@@ -24,7 +24,7 @@ module Chuych
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-  
+
 
       config.generators do |g|
         g.test_framework :rspec,
@@ -39,6 +39,11 @@ module Chuych
 
     config.assets.initialize_on_precompile = false
     # config.active_record.whitelist_attributes = false
-    config.serve_static_assets = true
+
+    # want the application to raise an error if an invalid locale is passed (or)
+    # want to default to the new Rails behaviors (or)
+    # care about locale validation
+    #
+    config.i18n.enforce_available_locales = true
   end
 end

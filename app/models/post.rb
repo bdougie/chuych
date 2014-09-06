@@ -1,13 +1,13 @@
 class Post < ActiveRecord::Base
-	belongs_to :user 
-	belongs_to :church
 
-	has_many :votes, dependent: :destroy
+   belongs_to :user
+   belongs_to :church
 
-  validates :body, length: { maximum: 200 }, presence: true
+   has_many :votes, dependent: :destroy
+
+   validates :body, length: { maximum: 200 }, presence: true
 
  	default_scope ->{order('created_at DESC')}
-
 
    def up_votes
       self.votes.where(value: 1).count
@@ -18,17 +18,17 @@ class Post < ActiveRecord::Base
    end
 
    def points
-      self.votes.sum(:value).to_i     
-   end 
+      self.votes.sum(:value).to_i
+   end
 
    def update_rank
       # age = (self.created_at - Time.new(1970,1,1)) / 86400
-      new_rank = points 
+      new_rank = points
 
       self.update_attribute(:rank, new_rank)
    end
 
-   private
+private
 
    # Possible alternative: after_create, create a +1 vote for the User the Bookmark belongs to
    # (forcing rank update)
@@ -39,7 +39,5 @@ class Post < ActiveRecord::Base
    def create_vote
       self.user.votes.create(value: 1, post: self)
    end
-
-
 
 end

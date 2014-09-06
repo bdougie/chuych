@@ -1,46 +1,36 @@
 #Planning
 
 Models:
-Users
-Churches
+Users - need their own pages
+Churches - need
 Post(Reviews & Tweets)
 Churches
     Name
     Location => auto populate based on    zip code
 Voting
-Follow
-
+Follow is now Connect
 
 Views:
 Post(similar) - index/welcome
     Index
     Show
-     Create: choose what church you attend 
+     Create: choose what church you attend
 
 Users
 Churches
     Name
     Location => auto populate based on    zip code
-    
+
 Login
 Lead or sign up page.
     Have an approval system to allow new users.
 
-Controllers:
-Tweets
-    CRUD
-Reviews
-    CRUD
-Users
-Churches
-Voting 
-Follow
-
 Routes:
-Reviews.belongs_to :users, :churches 
+# reviews need to be post
+Reviews.belongs_to :users, :churches
 Tweets.belongs_to :users
-Users can belong_to :churches bit not required.
-Vote churches
+Users follow churches but not belong to them
+Vote churches and for reviews
 Follow churches
 
 
@@ -53,9 +43,8 @@ Gems
 Instagram API, receive pictures
 Facebook API, login and share to
 Twitter API, login and share to, receive tweet
-CarrieWave, or something similar 
+CarrieWave, or something similar
 Minimagic
-Rspec, test all models and pages, possibly controllers 
 
 
 Searching:
@@ -67,7 +56,7 @@ custom searching using contolrollr
  params = {q: 'something'}
 ''''
 
-Location 
+Location
 http://www.rubygeocoder.com/
 @churches = Church.where('name = %', params[:name]).near(params[:near])
 
