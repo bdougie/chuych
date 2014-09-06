@@ -10,8 +10,10 @@ gem 'figaro'
 gem 'faker'
 gem 'gmaps4rails'
 gem 'mini_magick'
+gem 'puma'
 gem 'pry'
 gem 'uglifier', '>= 1.3.0'
+gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0'
 
 #/search/
