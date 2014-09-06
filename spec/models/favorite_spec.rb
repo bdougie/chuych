@@ -5,6 +5,6 @@ describe Favorite do
   let(:church) { FactoryGirl.build(:church) }
 
   it "should allow a user to follow a church" do
-    expect(user.favorite(church)).to be_true
+    expect(user.favorites(church)).to be_true
   end
 end

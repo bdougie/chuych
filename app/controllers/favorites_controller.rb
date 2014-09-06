@@ -1,5 +1,4 @@
 class FavoritesController < ApplicationController
-
   def create
     @church = Church.find(params[:church_id])
 
@@ -30,10 +29,10 @@ class FavoritesController < ApplicationController
 
   end
 
- private
-#test for functionality
- # 	def favorite_params
- #     params.require(:church).permit(:favorite)
-	# end
+private
+  #test for functionality
+  # 	def favorite_params
+  #     params.require(:church).permit(:favorite)
+	#   end
 
 end
