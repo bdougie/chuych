@@ -6,7 +6,6 @@
   <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-
 </head>
 <body>
 
@@ -14,13 +13,8 @@
 
     <ul class="nav nav-tabs">`
       <% if current_user %>
-    	<li><%=link_to root_path, class: 'btn btn-mini' do %>
-        <i class="glyphicon glyphicon-home"> </i>
-        <% end %>
-      </li>
-        <li><%=link_to "Post", new_post_path %></li>
-        <li><%=link_to "Churches", churches_path %></li>
-        <li><%=link_to "Followed Churches", '#' %></li>
+        <li><%=link_to "Home", root_path %></li>
+        <li><%=link_to "Discover", churches_path %></li>
       <% end %>
 
       <div class="pull-right user-info">
