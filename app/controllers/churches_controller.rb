@@ -1,8 +1,8 @@
 class ChurchesController < ApplicationController
 
   def index
-    #search method is undefined. 
-    # @search = Church.search do 
+    #search method is undefined.
+    # @search = Church.search do
     #   fulltext params[:search]
     # end
     if params[:near]
@@ -15,7 +15,7 @@ class ChurchesController < ApplicationController
       marker.lng church.longitude
     end
      # @churches = Church.paginate(page: params[:page], per_page: 10)
-    
+
   end
 
   def new
@@ -24,14 +24,14 @@ class ChurchesController < ApplicationController
 
   def create
 	 @church = Church.new(church_params)
-   if @church.save   
+   if @church.save
      flash[:notice] = "Church was saved successfully."
      redirect_to @church
    else
      flash[:error] = "Error creating church. Please try again."
      render :new
    end
-  end	
+  end
 
   def show
     @church = Church.find(params[:id])
