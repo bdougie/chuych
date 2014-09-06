@@ -1,6 +1,6 @@
 class FavoritesController < ApplicationController
 
-	  def create
+  def create
     @church = Church.find(params[:church_id])
 
     favorite = current_user.favorites.create(church: @church)
@@ -15,20 +15,20 @@ class FavoritesController < ApplicationController
   end
 
   def destroy
-  @church = Church.find(params[:church_id])
+    @church = Church.find(params[:church_id])
 
-  @favorite = current_user.favorites.find(params[:id])
+    @favorite = current_user.favorites.find(params[:id])
 
-  if @favorite.destroy
-    flash[:notice] = "Removed favorite."
-      redirect_to @church
+    if @favorite.destroy
+      flash[:notice] = "Removed favorite."
+        redirect_to @church
 
-  else
-    flash[:error] = "Unable to remove favorite. Please try again."
-      redirect_to @church
+    else
+      flash[:error] = "Unable to remove favorite. Please try again."
+        redirect_to @church
+    end
 
   end
-end
 
  private
 #test for functionality
