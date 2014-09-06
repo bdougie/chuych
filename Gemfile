@@ -44,7 +44,7 @@ group :production do
 end
 
 group :development, :test do
-  gem "better_errors", "1.0.1"
+  gem "better_errors"
   gem 'capybara'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'letter_opener', "1.1.2"

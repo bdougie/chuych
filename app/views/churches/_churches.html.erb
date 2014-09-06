@@ -1,6 +1,5 @@
 <div class="list-group">
 	<% churches.each do |church| %>
-
 	    <h4 class="list-group-item-heading"><%= link_to church.name, church %></h4>
 	    <p class="list-group-item-text">
 	    	<%= link_to church.city, churches_path(near: church.city) %><br/>
@@ -8,6 +7,6 @@
 	    </p>
 
 	  <br>
-
   <% end %>
+
 </div>
