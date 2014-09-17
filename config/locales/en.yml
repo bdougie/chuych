@@ -1,5 +1,10 @@
 en:
   hello: "Hello world"
+  chuych: "chuych"
+navigation:
+  home: "Home"
+  discover: "Discover More"
 church:
-
 global:
+welcome:
+  subscribe: "subscribe for exclusive access to our beta (currently not accepting emails)"
