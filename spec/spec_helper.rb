@@ -41,5 +41,7 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
+  # use restful paths in specs
+  config.include Rails.application.routes.url_helpers
 
 end
