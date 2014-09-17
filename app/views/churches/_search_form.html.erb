@@ -1,13 +1,13 @@
 <div class="row-fluid">
   <div class="span4">
 		<div class="form-group">
-			<%= form_tag churches_path, :method => :get do %>
-	  		
-		    <%= text_field_tag :near, params[:near], id: "location", class: "form-control", placeholder: 'Search by City or Address' %>
-			  
-		    <%= submit_tag "Search", :name => nil, class: "btn btn-primary"  %>
-			<% end %>
-		    
-	  </div> 
-  </div> 
-</div>	
+				<%= form_tag churches_path, :method => :get do %>
+					<div class="col-xs-4">
+				    <%= text_field_tag :near, params[:near], id: "location", class: "form-control",
+				     placeholder: 'Search by City or Zip Code' %>
+				  </div>
+			    <%= submit_tag "Search", :name => nil, class: "btn btn-primary"  %>
+				<% end %>
+	  </div>
+  </div>
+</div>
