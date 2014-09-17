@@ -48,8 +48,8 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_girl_rails', '~> 4.0'
   gem 'letter_opener', "1.1.2"
-  #added for sunspot/solr to be implemented at a later date
   gem 'rspec-rails'
+  #to be implemented at a later date
   gem 'sunspot_solr'
 end
 
