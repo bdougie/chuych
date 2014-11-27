@@ -1,14 +1,10 @@
-== README
+![](http://i.imgur.com/PGhtApj.jpg)
 
-#Chuych
-
-This is a church reviews site
+This is a simple church reviews site
 
 * Has User generated reviews
 
 * Share info on churches in a specific city
-
-* etc...
 
 ## Setup
 Copy the "config/application.example.yml" file and remove "example". Your application.yml should contain your sensitive credentials. It should be included in .gitnore as well.
