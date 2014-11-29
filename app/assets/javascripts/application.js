@@ -15,6 +15,13 @@
 //= require bootstrap
 //= require turbolinks
 //= require jquery.geocomplete.min
+//= require contact
+//= require html5shiv
+//= require jquery.easing.1.3
+//= require jquery.flexslider
+//= require jquery.html5-placeholder-shim
+//= require main
+//= require respond
 //= require underscore
 //= require gmaps/google
 //= require_tree .
