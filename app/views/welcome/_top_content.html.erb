@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row top-wrap">
+      <div class="col-lg-8 chuych-wrap">
+        <%= image_tag("/assets/chuych.jpg") %>
+      </div>
+      <div class="col-lg-4">
+          <div class="order-wrap">
+            <h2><i class="fa fa-unlock-alt"></i> Sign Up!</h2>
+            <form class="apply-form form-group" method="post" action="php/contact.php">
+              <input type="text" name="firstname" class="form-control" placeholder="Name" required="required">
+              <input type="email" name="email" class="form-control" placeholder="Email Address" required="required">
+              <input type="password" name="password" class="form-control" placeholder="Password" required="required">
+
+              <select name="booklist" class="form-control" >
+                <option value="No&nbsp;book&nbsp;Selected">Select a book</option>
+                <option value="Wordpress&nbsp;installation&nbsp;ebook">Wordpress installation ebook</option>
+                <option value="Learn&nbsp;to&nbsp;be&nbsp;a&nbsp;rockstart">Learn to be a rockstart</option>
+                <option value="Some&nbsp;ebook&nbsp;name">Some ebook name</option>
+              </select>
+              <textarea rows="2" name="message" class="form-control" placeholder="Question? If any.."></textarea>
+              <div class="form-btn">
+                <button type="submit" class="btn1 btn-center" href="#">Submit</button>
+              </div>
+            </form>
+            <div id="loading"><span>Sending your message....</span></div>
+            <div id="success"><span><i class="fa fa-check"></i> <span></div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <!-- /.container -->
+</div>
+
+
+
