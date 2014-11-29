@@ -34,6 +34,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'sass-rails', '~> 4.0.0'
 gem 'turbolinks'
+gem "font-awesome-rails"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -46,6 +47,7 @@ end
 
 group :development, :test do
   gem "better_errors"
+  gem "binding_of_caller"
   gem 'capybara'
   gem 'database_cleaner', '~> 1.3.0'
   gem 'factory_girl_rails', '~> 4.0'

@@ -2,60 +2,41 @@
 <html>
 <head>
   <title>Chuych</title>
+
+  <!-- Migrate to the Asset Pipeline -->
+
+    <!-- Google Webfonts -->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400italic' rel='stylesheet' type='text/css'>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/owl-carousel/owl.carousel.css" />
+    <link rel="stylesheet" href="js/owl-carousel/owl.theme.css" />
+    <link rel="stylesheet" href="css/flexslider.css"/>
+
+    <!--[if IE 8]>
+      <link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen" />
+    <![endif]-->
+
+    <!-- Add custom CSS here -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+          <script src="./js/html5shiv.js"></script>
+          <script src="./js/respond.js"></script>
+    <![endif]-->
+
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places" %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <div class="container">
-
-    <ul class="nav nav-tabs">
-      <% if current_user %>
-        <li><%=link_to "Home", root_path %></li>
-        <li><%=link_to "Discover More", churches_path %></li>
-        <li><%=link_to "Blog", "https://chuych.ghost.io" %></li>
-      <% end %>
-
-      <div class="pull-right user-info">
-        <% if current_user %>
-
-         <%= link_to image_tag(current_user.avatar.tiny.url), current_user if current_user.avatar? %>
-
-        Hello <%= link_to (current_user.name || current_user.email), current_user %>!
-          <%= link_to edit_user_registration_path, class: 'btn btn-mini' do %>
-            <i class="glyphicon glyphicon-user"> </i>
-          <% end %>
-          <%= link_to destroy_user_session_path, method: :delete, class: 'btn btn-mini' do %>
-            <i class="glyphicon glyphicon-off"> </i>
-          <% end %>
-        <% else %>
-
-          <li><%= link_to "Sign In", new_user_session_path %> or</li>
-          <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <% end %>
-    </ul>
-
-     <% if flash[:notice] %>
-      <div class="alert alert-success">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <%= flash[:notice] %>
-      </div>
-    <% elsif flash[:error] %>
-      <div class="alert alert-error">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <%= flash[:error] %>
-      </div>
-    <% elsif flash[:alert] %>
-      <div class="alert">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <%= flash[:alert] %>
-      </div>
-    <% end %>
 
 <%= yield %>
-  </div>
-
+  <%= render "layouts/footer" %>
 </body>
 </html>

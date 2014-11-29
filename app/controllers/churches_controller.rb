@@ -14,7 +14,7 @@ class ChurchesController < ApplicationController
       marker.lat church.latitude
       marker.lng church.longitude
     end
-     # @churches = Church.paginate(page: params[:page], per_page: 10)
+     @churches = Church.paginate(page: params[:page], per_page: 10)
 
   end
 
