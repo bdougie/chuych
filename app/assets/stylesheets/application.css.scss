@@ -37,6 +37,7 @@ p {
 }
 
 /* Church Content */
+
 .church-content {
   min-height: 320px;
 }
@@ -132,23 +133,26 @@ p {
 .chuych-wrap {
     position: relative;
     padding: 0px;
-    background: #d3d3d3;
     margin-top: 50px;
+    min-height: 500px;
     display: table;
     border-radius: 10px;
     overflow: hidden;
     border-bottom: 4px solid #b83b01;
+    background-color: rgba(255,255,255, 0.7);
 }
 
 .order-wrap {
     position: relative;
     padding: 0px;
-    background: #fff;
     margin-top: 50px;
+    min-height: 500px;
+    min-width: 300px;
     display: table;
     border-radius: 10px;
     overflow: hidden;
     border-bottom: 4px solid #b83b01;
+    background-color: rgba(255,255,255, 0.7);
 }
 
 .order-wrap form {
