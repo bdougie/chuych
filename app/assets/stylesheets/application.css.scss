@@ -36,12 +36,21 @@ p {
     overflow: hidden;
 }
 
+/* Church Content */
+
+.church-content {
+  min-height: 320px;
+}
+
 /* Header */
 
 .navbar-default {
     background: none;
     border: none;
     border-radius: 0px;
+    background: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    max-height: 110px;
 }
 
 .header {
@@ -78,7 +87,7 @@ p {
     padding-top: 0px;
     padding-bottom: 70px;
     box-shadow: 0px !important;
-    background: #eb4b01;
+    background: url(http://i.imgur.com/sKInxgE.jpg) no-repeat center center scroll;
     position: relative;
 }
 
@@ -124,23 +133,26 @@ p {
 .chuych-wrap {
     position: relative;
     padding: 0px;
-    background: #d3d3d3;
     margin-top: 50px;
+    min-height: 500px;
     display: table;
     border-radius: 10px;
     overflow: hidden;
     border-bottom: 4px solid #b83b01;
+    background-color: rgba(255,255,255, 0.7);
 }
 
 .order-wrap {
     position: relative;
     padding: 0px;
-    background: #fff;
     margin-top: 50px;
+    min-height: 500px;
+    min-width: 300px;
     display: table;
     border-radius: 10px;
     overflow: hidden;
     border-bottom: 4px solid #b83b01;
+    background-color: rgba(255,255,255, 0.7);
 }
 
 .order-wrap form {
