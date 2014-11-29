@@ -1,31 +1,31 @@
 <%= form_for @church do |f| %>
    <div class="form-group">
     <%= f.label :image %>
-    <%= f.file_field :image, class: "form-control" %>
+    <%= f.file_field :image, class: "form-control", readonly: "readonly" %>
   </div>
-  
+
 	<div class="form-group">
     <%= f.label :name, 'Church Name' %>
-    <%= f.text_field :name, class: "form-control" %>
+    <%= f.text_field :name, class: "form-control", readonly: "readonly" %>
   </div>
 
   <div class="form-group">
     <%= f.label :city, 'City,St' %>
-    <%= f.text_field :city, placeholder: 'Tampa, KS', class: "form-control",  id: 'location'  %>
+    <%= f.text_field :city, placeholder: 'Tampa, KS', class: "form-control",  id: 'location', readonly: "readonly"  %>
   </div>
 
   <div class="form-group">
     <%= f.label :denomination_list, 'Denonimination (Feel free to make up your own)' %>
-    <%= f.text_field :denomination_list, placeholder: 'Catholic, Lutheran, Non-denonimational', class: "form-control" %>
+    <%= f.text_field :denomination_list, placeholder: 'Catholic, Lutheran, Non-denonimational', class: "form-control", readonly: "readonly" %>
   </div>
 
   <div class="form-group">
-    <%= f.label :tag, 'Describe the church in 3 or more words' %>
-    <%= f.text_field :tag_list, placeholder: 'Food, Fun, Fellowship', class: "form-control" %>
+    <%= f.label :tag, 'Describe the church in 3 or more words', readonly: "readonly" %>
+    <%= f.text_field :tag_list, placeholder: 'Food, Fun, Fellowship', class: "form-control", readonly: "readonly" %>
   </div>
   <div class="form-group">
     <%= f.label :description %>
-    <%= f.text_area :description, rows: 3, placeholder: 'Tell us about the church, we wont judge if you paste from the churches website. Just be sure to include a service time.', class: "form-control" %>
+    <%= f.text_area :description, rows: 3, placeholder: 'Tell us about the church, we wont judge if you paste from the churches website. Just be sure to include a service time.', class: "form-control", readonly: "readonly" %>
   </div>
   <div class="form-group">
     <%= f.submit class: "btn btn-primary" %>

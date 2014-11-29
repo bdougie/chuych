@@ -1,4 +1,4 @@
 <%= form_tag churches_path, class: "apply-form form-group", :method => :get do %>
-    <%= text_field_tag :near, params[:near], id: "location", class: "form-control", placeholder: 'City or Zip Code' %>
+    <%= text_field_tag :near, params[:near], id: "location", class: "form-control", readonly: "readonly", placeholder: 'City or Zip Code' %>
 	  <%= submit_tag "Search", class: "btn1 btn-center" %>
 <% end %>
