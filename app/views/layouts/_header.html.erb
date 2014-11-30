@@ -7,7 +7,15 @@
       <li><a href="http://twitter.com/hellochuych" target="_blank"><i class="fa fa-twitter"></i> twitter</a></li>
       <li><a href="https://www.facebook.com/hellochuych" target="_blank"><i class="fa fa-facebook"></i> facebook</a></li>
       <li><a href="http://chuych.ghost.io" target="_blank"><i class="fa fa-book"></i> Blog </a></li>
-      <li class="purchase"><a href="/users/login"><i class="fa sign-in"></i> Sign In</a></li>
+      <% if current_user %>
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <li class="purchase"><i class="fa sign-in"></i> Log Out</a></li>
+        <% end %>
+      <% else %>
+        <%= link_to new_user_session_path do %>
+          <li class="purchase"><i class="fa sign-in"></i> Sign In</a></li>
+        <% end %>
+      <% end %>
     </ul>
   </div>
 </nav>
