@@ -3,11 +3,15 @@
   <div class="intro">
     <!-- Header -->
     <%= render "layouts/header" %>
-    <%= render "top_content" %>
+    <% if !current_user %>
+      <%= render "top_content" %>
+    <% end %>
   </div>
 
   <!-- Churches -->
-  <%= render "churches/index" %>
+  <% if current_user %>
+    <%= render "churches/index" %>
+  <% end %>
 
   <!-- Subscribe -->
   <%= render "subscribe" %>

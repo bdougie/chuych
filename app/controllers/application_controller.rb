@@ -10,7 +10,11 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(resource)
-    welcome_index_path
+    root_path
+  end
+
+  def disable_nav
+    @disable_nav = true
   end
 
 private
