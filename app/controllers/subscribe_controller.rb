@@ -8,10 +8,10 @@ class SubscribeController < ApplicationController
     @subscrition = Gibbon::API.new
     @subscrition.lists.subscribe({
       id: @list_id,
-      email: { email: subscribe_params[:email] }
-      }), :merge_vars => {:FNAME => 'Early Adopter'}, :double_optin => false})
+      email: { email: subscribe_params[:email] },
+      :merge_vars => {:FNAME => 'Early Adopter'}, :double_optin => true })
 
-    # TODO create a modal to enter their name.
+    # TODO create new list that does not require a name and delete :merge_vars, also create thank you page.
     #
     redirect_to_back
   rescue Gibbon::MailChimpError => e
