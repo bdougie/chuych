@@ -4,5 +4,6 @@ class SubscriptionForm
   extend  ActiveModel::Naming
 
   attribute :email, String
+  attribute :name, String
 
 end
