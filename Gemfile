@@ -16,6 +16,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'rails_12factor'
 gem 'will_paginate', '~> 3.0'
 gem 'rubocop'
+gem 'gibbon'
 
 #/search/
 gem 'acts-as-taggable-on'
