@@ -1,18 +1,18 @@
 <div class="container">
-  <% if flash[:notice] %>
+  <% if flash[:notice]  %>
     <div class="alert alert-success">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:notice] %>
+      <%= flash[:notice] unless value.blank? %>
     </div>
   <% elsif flash[:error] %>
     <div class="alert alert-error">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:error] %>
+      <%= flash[:error] unless value.blank? %>
     </div>
   <% elsif flash[:alert] %>
     <div class="alert">
       <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:alert] %>
+      <%= flash[:alert] unless value.blank? %>
     </div>
   <% end %>
 </div>
