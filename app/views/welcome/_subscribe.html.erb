@@ -5,11 +5,12 @@
           <h3>Subscribe and get updates on chuych.</h3>
         </div>
         <div class="col-lg-6">
-          <form class="newsletter-form" action="php/subscribe.php" id="invite" method="POST">
-            <input type="text" placeholder="Email Address" name="email" id="address" data-validate="validate(required, email)"/>
-            <button type="submit" class="btn btn3"><i class="fa fa-envelope-o"></i> Join</button>
-            <span id="result"></span>
-          </form>
+          <%= form_for SubscriptionForm.new, url: subscribe_index_path do |f| %>
+            <%= f.text_field :email, placeholder: "Email Address"%>
+            <%= button_tag(class: "btn btn3") do %>
+              <i class='fa fa-envelope-o'></i> Subscribe
+            <% end %>
+          <% end %>
         </div>
       </div>
     </div>
