@@ -10,6 +10,7 @@ class SubscribeController < ApplicationController
       id: @list_id,
       email: { email: subscribe_params[:email] }, :double_optin => true })
 
+    flash[:notice] = "Subscription confirmation has been sent to your email"
     redirect_to_back
   rescue Gibbon::MailChimpError => e
     return redirect_to root_path, :flash => { error: e.message }
