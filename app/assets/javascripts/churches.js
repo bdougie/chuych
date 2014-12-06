@@ -1,8 +1,7 @@
 $(function(){
   $('#churches').masonry({
     itemSelector: '.box',
-    columnWidth: 200,
-    isAnimated: !Modernizr.csstransitions,
+    columnWidth: 320,
     isFitWidth: true
   });
 

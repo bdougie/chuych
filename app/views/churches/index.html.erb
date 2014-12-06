@@ -11,9 +11,10 @@
       </div>
     </div>
   </div>
-  <div class="container">
+  <div class="container transitions-enabled" id="container">
 		<%= render partial: 'churches/churches', locals: { churches: @churches } %>
   </div>
+  <!-- Testimonials todo w/jquery-->
   <!-- New Church -->
   <div class="text-center welcome">
     <%= render "churches/new_church_call" %>

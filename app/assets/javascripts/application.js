@@ -12,15 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.turbolinks
+//= require masonry/jquery.masonry
+//= require masonry/jquery.imagesloaded.min
+//= require masonry/modernizr-transitions
 //= require bootstrap
 //= require turbolinks
 //= require jquery.geocomplete.min
-//= require contact
-//= require html5shiv
-//= require jquery.easing.1.3
-//= require jquery.flexslider
-//= require jquery.html5-placeholder-shim
-//= require main
 //= require respond
 //= require underscore
 //= require gmaps/google
