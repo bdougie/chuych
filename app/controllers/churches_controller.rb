@@ -1,6 +1,7 @@
 class ChurchesController < ApplicationController
 
   def index
+    raise
     #search method is undefined.
     # @search = Church.search do
     #   fulltext params[:search]
@@ -14,7 +15,7 @@ class ChurchesController < ApplicationController
       marker.lat church.latitude
       marker.lng church.longitude
     end
-     @churches = Church.paginate(page: params[:page], per_page: 10)
+    @churches = Church.paginate(page: params[:page], per_page: 10)
 
   end
 

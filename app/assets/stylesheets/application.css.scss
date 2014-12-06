@@ -193,12 +193,14 @@ p {
 }
 
 .apply-form input , .apply-form select {
-    color: #777 !important;
     height: 40px;
     padding: 10px 15px;
     border: 1px solid #ccc;
   margin-bottom:20px;
-  margin-top:0px;
+  margin-top:-8px;
+  #search-form {
+    background-color:red;
+  }
 }
 
 .apply-form textarea {
@@ -290,7 +292,7 @@ textarea:-ms-input-placeholder {
 
 .line {
     height: 1px;
-    width: 250px;
+    width: 500px;
     margin: 25px auto 40px;
     background: #000;
 }
