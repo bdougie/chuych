@@ -1,7 +1,6 @@
 class ChurchesController < ApplicationController
 
   def index
-    raise
     #search method is undefined.
     # @search = Church.search do
     #   fulltext params[:search]
