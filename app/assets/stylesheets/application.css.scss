@@ -2,6 +2,25 @@
 @import "bootstrap";
 @import "font-awesome";
 
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 60%;
+  /* equal to footer height */
+  margin-bottom: -142;
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  height: 142;
+}
+
 body, html {
     height: 100%;
     width: 100%;
@@ -40,6 +59,7 @@ p {
 
 .church-content {
   min-height: 350px;
+  margin-top: 30px;
 }
 
 /* Header */
