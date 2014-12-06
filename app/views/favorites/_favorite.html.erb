@@ -1,15 +1,13 @@
 <% if can? :create, Favorite %>
-
-<div class="favorite">
+  <div class="favorite">
     <% if favorite = current_user.favorited(church) %>
-      <%= link_to [church, favorite], class: 'btn btn-small', method: :delete do %>
-        <i class="glyphicon glyphicon-star-empty"> </i>&nbsp; Disconnect
+      <%= link_to [church, favorite], method: :delete do %>
+        <li class="btn2 btn-center"><i class="fa fa-star"> Connected</i></li>
       <% end %>
     <% else %>
-      <%= link_to [church, Favorite.new], class: 'btn btn-small', method: :post do %>
-        <i class="glyphicon glyphicon-star"> </i>&nbsp; Connect
+      <%= link_to [church, Favorite.new], method: :post do %>
+        <li class="btn2 btn-center"><i class="fa fa-star-o"> Connect with this church</i></li>
       <% end %>
     <% end %>
-</div>
-
+  </div>
 <% end %>
