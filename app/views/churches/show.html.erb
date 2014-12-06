@@ -1,25 +1,21 @@
-<div class="container">
-
-  <h1><%= @church.name %></h1>
-
-  <div class="pull-right">
-    <%= render partial: 'favorites/favorite', locals: { church: @church } %>
-  </div>
-
+<div class="container page-wrap">
   <div class="church-content">
-    <% if can? :edit, @post %>
-      <div class="pull-right">
-      <%= link_to "Edit", edit_church_path(@church), class: 'btn btn-block btn-default' %>
+    <div class="list-group col-lg-8">
+      <h2 class="list-group-item-heading"><%= @church.name %></h2>
+      <p class="list-group-item-text"><%= @church.city %></p>
+      <p class="list-group-item-text">Denomination: <%= @church.denomination_list %></p>
+      <p class="list-group-item-text"><%= @church.description %></p>
+      <p class="list-group-item-text"><%= @church.tag_list %></p>
+      </br>
+      <p class="list-group-item-text"><%= image_tag(@church.image) %></p>
+    </div>
 
-    	<%= link_to "Delete", @church, method: :delete, class: 'btn btn-large btn-block btn-danger', confirm: 'Are you sure you want to delete this church?' %>
-     	</div>
-    <% end %>
-    <p>Located in: <%= @church.city %></p>
-
-    <p>Description: <%= @church.description %></p>
-
-    <p><%= @church.tag_list %></p>
-    	<p>Denomination: <%= @church.denomination_list %></p>
+    <div class="col-lg-4">
+      <%= render partial: 'favorites/favorite', locals: { church: @church } %>
+      <% if can? :edit, @post %>
+        <%= link_to "Edit", church_edit_path(@church), class: 'btn btn-block btn-default' %>
+      	<%= link_to "Delete", @church, method: :delete, class: 'btn btn-large btn-block btn-danger', confirm: 'Are you sure you want to delete this church?' %>
+      <% end %>
+    </div>
   </div>
-
 </div>
