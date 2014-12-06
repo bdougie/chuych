@@ -5,7 +5,7 @@
     </div>
     <div class="col-lg-6" id="search-box">
       <%= text_field_tag :near, params[:near], id: "location", class: "form-control",
-       placeholder: 'City or Zip Code' %>
+       readonly: 'readonly', placeholder: 'City or Zip Code' %>
     </div>
   <% end %>
 </div>
