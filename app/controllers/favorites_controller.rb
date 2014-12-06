@@ -4,10 +4,10 @@ class FavoritesController < ApplicationController
     @church = Church.find(params[:church_id])
     favorite = current_user.favorites.create(church: @church)
     if favorite.valid?
-      flash[:notice] = "Followed church"
+      flash[:notice] = "Connected to #{@church.name}"
       redirect_to @church
     else
-      flash[:error] = "Unable to add follow. Please try again."
+      flash[:error] = "Unable to connect. Please try again."
       redirect_to @church
     end
   end
@@ -16,10 +16,10 @@ class FavoritesController < ApplicationController
     @church = Church.find(params[:church_id])
     @favorite = current_user.favorites.find(params[:id])
     if @favorite.destroy
-      flash[:notice] = "Removed favorite."
+      flash[:notice] = "Removed your connection from #{@church.name}."
         redirect_to @church
     else
-      flash[:error] = "Unable to remove favorite. Please try again."
+      flash[:error] = "Unable to remove connection from #{@church.name}. Please try again."
         redirect_to @church
     end
   end

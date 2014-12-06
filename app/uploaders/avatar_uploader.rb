@@ -49,7 +49,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 
   def default_url
-    '/assets/default.jpeg'
+    'http://i.imgur.com/bH2Ci4q.jpg'
   end
 
 
