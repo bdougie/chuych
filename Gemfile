@@ -61,4 +61,5 @@ end
 
 group :development do
   gem 'sqlite3'
+  gem 'meta_request'
 end
